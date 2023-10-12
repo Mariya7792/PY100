@@ -25,23 +25,23 @@ files:
     status: Unchecked
     encrypted_possible_answer: time * 60
   - offset: 407
-    length: 24
+    length: 21
     placeholder_text: "...  # TODO размер файла"
     initial_state:
       length: 24
       offset: 390
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: "time_in_sec * speed_in_kb_in_sec  # размер файла"
-  - offset: 446
+  - offset: 443
     length: 27
     placeholder_text: "...  # TODO стоимость файла"
     initial_state:
       length: 27
       offset: 429
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: "(file_size - free_traffic) * cost  # стоимость фай\
       ла"
