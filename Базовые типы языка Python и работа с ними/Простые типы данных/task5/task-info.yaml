@@ -15,7 +15,7 @@ files:
     status: Unchecked
     encrypted_possible_answer: speed / 1024
   - offset: 296
-    length: 47
+    length: 44
     placeholder_text: "...  # TODO перевести время в секунды"
     initial_state:
       length: 37
@@ -24,7 +24,7 @@ files:
     selected: true
     status: Unchecked
     encrypted_possible_answer: time * 60
-  - offset: 410
+  - offset: 407
     length: 24
     placeholder_text: "...  # TODO размер файла"
     initial_state:
@@ -34,7 +34,7 @@ files:
     selected: false
     status: Unchecked
     encrypted_possible_answer: "time_in_sec * speed_in_kb_in_sec  # размер файла"
-  - offset: 449
+  - offset: 446
     length: 27
     placeholder_text: "...  # TODO стоимость файла"
     initial_state:
