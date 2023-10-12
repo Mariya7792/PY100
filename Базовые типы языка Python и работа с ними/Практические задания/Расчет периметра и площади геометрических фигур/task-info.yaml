@@ -31,5 +31,8 @@ files:
     Периметр квадрата: 20
     Площадь квадрата: 25
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 12 Oct 2023 17:08:01 UTC"
 record: -1

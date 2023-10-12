@@ -12,7 +12,7 @@ files:
       offset: 71
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       print("Третье письмо:", emails[2])
       print("Предпоследнее письмо:", emails[-2])
@@ -30,5 +30,8 @@ files:
     Третье письмо: Письмо 3
     Предпоследнее письмо: Письмо 4
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 12 Oct 2023 17:20:23 UTC"
 record: -1

@@ -4,15 +4,15 @@ files:
   visible: true
   placeholders:
   - offset: 71
-    length: 69
+    length: 109
     placeholder_text: '# TODO распечатайте список писем в обратном порядке от новых
       к старым'
     initial_state:
       length: 69
       offset: 71
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       reversed_emails = emails[::-1]
       print(reversed_emails)
@@ -29,5 +29,8 @@ files:
   text: |
     ['Письмо 5', 'Письмо 4', 'Письмо 3', 'Письмо 2', 'Письмо 1']
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 12 Oct 2023 17:22:28 UTC"
 record: -1

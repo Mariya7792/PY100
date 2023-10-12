@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 36
+  - offset: 32
     length: 32
     placeholder_text: "...  # TODO сформировать список цифр"
     initial_state:
@@ -11,57 +11,57 @@ files:
       offset: 13
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: "[4, 9, 5, 1, 8, 4]"
-  - offset: 108
-    length: 23
+  - offset: 217
+    length: 28
     placeholder_text: "...)  # TODO сумма цифр"
     initial_state:
       length: 23
       offset: 89
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: sum(list_digit))
-  - offset: 157
-    length: 28
+  - offset: 282
+    length: 24
     placeholder_text: "...)  # TODO количество цифр"
     initial_state:
       length: 28
       offset: 138
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: len(list_digit))
-  - offset: 213
-    length: 30
+  - offset: 333
+    length: 37
     placeholder_text: "...)  # TODO минимальная цифра"
     initial_state:
       length: 30
       offset: 194
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: min(list_digit))
-  - offset: 272
-    length: 31
+  - offset: 400
+    length: 36
     placeholder_text: "...)  # TODO максимальная цифра"
     initial_state:
       length: 31
       offset: 253
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: max(list_digit))
-  - offset: 341
-    length: 40
+  - offset: 507
+    length: 0
     placeholder_text: "...)  # TODO среднее арифметическое цифр"
     initial_state:
       length: 40
       offset: 322
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: "round(sum(list_digit) / len(list_digit), 2))"
   text: |
     list_digit = ...  # TODO сформировать список цифр
@@ -86,5 +86,8 @@ files:
     Максимальная цифра 9
     Среднее арифметическое цифр 5.17
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 12 Oct 2023 17:00:06 UTC"
 record: -1
