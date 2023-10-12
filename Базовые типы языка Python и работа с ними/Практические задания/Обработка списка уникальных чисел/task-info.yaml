@@ -1,0 +1,52 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 82
+    length: 209
+    placeholder_text: |-
+      # TODO найти сумму, количество и среднее арифметическое уникальных чисел
+
+      print("Сумма уникальных чисел:", ...)
+      print("Количество уникальных чисел:", ...)
+      print("Среднее арифметическое уникальных чисел:", ...)
+    initial_state:
+      length: 209
+      offset: 82
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      unique_numbers = set(list_)
+
+      sum_of_numbers = sum(unique_numbers)
+      count_of_numbers = len(unique_numbers)
+      average_of_numbers = round(sum_of_numbers / count_of_numbers, 5)
+
+      describe = {
+          "Сумма уникальных чисел:": sum_of_numbers,
+          "Количество уникальных чисел:": count_of_numbers,
+          "Среднее арифметическое уникальных чисел:": average_of_numbers,
+      }
+      print(describe)
+  text: |
+    list_ = [8, 9, -5, -3, 1, -10, 8, -10, -5, 0, 5, -4, 0, 10, -8, 1, 6, -6, 6, -9]
+
+    # TODO найти сумму, количество и среднее арифметическое уникальных чисел
+
+    print("Сумма уникальных чисел:", ...)
+    print("Количество уникальных чисел:", ...)
+    print("Среднее арифметическое уникальных чисел:", ...)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    {'Сумма уникальных чисел:': -6, 'Количество уникальных чисел:': 14, 'Среднее арифметическое уникальных чисел:': -0.42857}
+  learner_created: false
+status: Unchecked
+record: -1
+solution_hidden: true

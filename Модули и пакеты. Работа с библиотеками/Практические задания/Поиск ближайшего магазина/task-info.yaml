@@ -1,0 +1,106 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 316
+    placeholder_text: |-
+      # TODO Отрефакторите код
+      def get_distance(shop_point: tuple[float, float]) -> float:
+          """Функция для вычисления евклидово расстояния до магазина."""
+          return (shop_point[0] ** 2 + shop_point[1] ** 2) ** 0.5
+
+
+      def get_nearest_shop(shop_points: list[tuple]) -> tuple:
+          return min(shop_points, key=get_distance)
+    initial_state:
+      length: 316
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def get_nearest_shop(shop_points: list[tuple]) -> tuple:
+          return min(shop_points, key=lambda shop_point: (shop_point[0] ** 2 + shop_point[1] ** 2) ** 0.5)
+  text: |-
+    # TODO Отрефакторите код
+    def get_distance(shop_point: tuple[float, float]) -> float:
+        """Функция для вычисления евклидово расстояния до магазина."""
+        return (shop_point[0] ** 2 + shop_point[1] ** 2) ** 0.5
+
+
+    def get_nearest_shop(shop_points: list[tuple]) -> tuple:
+        return min(shop_points, key=get_distance)
+
+
+    if __name__ == '__main__':
+        points = [
+            (4.5, 3),
+            (2.1, -1),
+            (6.8, -3),
+            (1.4, 2.9)
+        ]
+
+        nearest_shop = get_nearest_shop(points)
+        print(f"Ближайший магазин находится в координатах: {nearest_shop}")
+  learner_created: false
+- name: tests/test_task.py
+  visible: false
+  text: |
+    import ast
+    import unittest
+
+    try:
+        from task import get_nearest_shop
+    except ImportError:
+        raise AssertionError(
+            'Не удаляйте функцию `get_nearest_shop`'
+        )
+
+
+    def has_lambda(code):
+        tree = ast.parse(code)
+
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Lambda):
+                return True
+
+        return False
+
+
+    class TestCase(unittest.TestCase):
+        def test_remove_function_get_distance(self):
+            msg = "Функция `get_distance` должна быть удалена."
+            with self.assertRaises(ImportError, msg=msg):
+                from task import get_distance
+
+        def test_get_nearest_shop(self):
+            shop_points = [
+                (4.5, 3),
+                (2.1, -1),
+                (6.8, -3),
+                (1.4, 2.9)
+            ]
+            expected_value = (2.1, -1)
+            actual_value = get_nearest_shop(shop_points)
+
+            assert actual_value == expected_value, (
+                'Проверьте, что функция `get_nearest_shop` верно находит координаты ближайшего магазина.'
+            )
+
+        def test_use_lambda_in_get_nearest_shop(self):
+            filepath = "task.py"
+            with open(filepath) as f:
+                assert has_lambda(f.read()) is True, (
+                    'Проверьте, что в функции `get_nearest_shop` используется lambda функция.'
+                )
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/__init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1

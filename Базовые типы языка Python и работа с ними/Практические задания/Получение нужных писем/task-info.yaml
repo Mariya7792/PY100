@@ -1,0 +1,34 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 71
+    length: 74
+    placeholder_text: '# TODO С помощью индексации распечатайте каждое письмо на отдельной
+      строке'
+    initial_state:
+      length: 74
+      offset: 71
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      print("Третье письмо:", emails[2])
+      print("Предпоследнее письмо:", emails[-2])
+  text: |
+    emails = ["Письмо 1", "Письмо 2", "Письмо 3", "Письмо 4", "Письмо 5"]
+
+    # TODO С помощью индексации распечатайте каждое письмо на отдельной строке
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Третье письмо: Письмо 3
+    Предпоследнее письмо: Письмо 4
+  learner_created: false
+status: Unchecked
+record: -1

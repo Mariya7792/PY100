@@ -1,0 +1,32 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 12
+    length: 55
+    placeholder_text: "...  # TODO поочередно подставьте значения True и False"
+    initial_state:
+      length: 55
+      offset: 12
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "True"
+  text: |
+    condition = ...  # TODO поочередно подставьте значения True и False
+    if condition:
+        # один отступ для указания принадлежности данного кода к определенному блоку
+        print("Выполнится, если условие истинно")
+    else:
+        # один отступ для указания принадлежности данного кода к определенному блоку
+        print("Выполнится, если условие ложно")
+
+    print("Выполнится всегда, так как нет условия")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

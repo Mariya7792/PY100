@@ -1,0 +1,73 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 186
+    length: 95
+    placeholder_text: "...  # TODO перевести скорость скачивания из байт в килобай\
+      ты, если 1 килобайт = 1024 байта"
+    initial_state:
+      length: 91
+      offset: 180
+    initialized_from_dependency: false
+    selected: true
+    status: Unchecked
+    encrypted_possible_answer: speed / 1024
+  - offset: 296
+    length: 47
+    placeholder_text: "...  # TODO перевести время в секунды"
+    initial_state:
+      length: 37
+      offset: 286
+    initialized_from_dependency: false
+    selected: true
+    status: Unchecked
+    encrypted_possible_answer: time * 60
+  - offset: 410
+    length: 24
+    placeholder_text: "...  # TODO размер файла"
+    initial_state:
+      length: 24
+      offset: 390
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "time_in_sec * speed_in_kb_in_sec  # размер файла"
+  - offset: 449
+    length: 27
+    placeholder_text: "...  # TODO стоимость файла"
+    initial_state:
+      length: 27
+      offset: 429
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "(file_size - free_traffic) * cost  # стоимость фай\
+      ла"
+  text: |
+    speed = 4096  # скорость передачи данных в байтах/cек
+    time = 120  # время в минутах затраченное на скачивание игры
+    cost = 0.125  # стоимость за один килобайт
+
+    speed_in_kb_in_sec = ...  # TODO перевести скорость скачивания из байт в килобайты, если 1 килобайт = 1024 байта
+    time_in_sec = ...  # TODO перевести время в секунды
+
+    free_traffic = 500  # количество бесплатного трафика
+    file_size = ...  # TODO размер файла
+    total_coast = ...  # TODO стоимость файла
+
+    print('Размер файла в килобайтах =', file_size)
+    print('За трафик придется заплатить:', total_coast)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Размер файла в килобайтах = 28800.0
+    За трафик придется заплатить: 3537.5
+  learner_created: false
+status: Unchecked
+record: -1

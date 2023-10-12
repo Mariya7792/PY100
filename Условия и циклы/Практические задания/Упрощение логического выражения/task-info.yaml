@@ -1,0 +1,31 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 125
+    length: 122
+    placeholder_text: "is_active == True and is_blocked != False:  # TODO Избавьте\
+      сь от операторов сравния при работе с логическими типами данных"
+    initial_state:
+      length: 122
+      offset: 125
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 'is_active and not is_blocked:'
+  text: |
+    is_active = True  # Статус активен пользователь или нет
+    is_blocked = False  # # Статус заблокирован пользователь или нет
+
+    if is_active == True and is_blocked != False:  # TODO Избавьтесь от операторов сравния при работе с логическими типами данных
+        print("Пользователь прошел проверку")
+    else:
+        print("Пользователь не прошел проверку")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

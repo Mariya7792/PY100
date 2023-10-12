@@ -1,0 +1,23 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  text: |
+    try:
+        x = ...  # TODO Напишите input, чтобы запросить число
+        result = 10 / x
+    except ZeroDivisionError:
+        print("Ошибка: Деление на ноль!")
+    except ValueError:
+        print("Ошибка: Введено некорректное число!")
+    else:
+        print("Результат: ", result)
+    finally:
+        print("Конец программы")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

@@ -1,0 +1,43 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 60
+    placeholder_text: |-
+      # TODO реализовать функцию
+      def get_sentences_list():
+          ...
+    initial_state:
+      length: 60
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def get_sentences_list(str_words):
+          sentences_list = []
+          for sentence in str_words.split("."):
+              if sentence:
+                  sentences_list.append(sentence.strip())
+
+          return sentences_list
+  text: |
+    # TODO реализовать функцию
+    def get_sentences_list():
+        ...
+
+
+    print(get_sentences_list("Здесь много разных слов. Возможно и много повторений..."))
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    ['Здесь много разных слов', 'Возможно и много повторений']
+  learner_created: false
+status: Unchecked
+record: -1

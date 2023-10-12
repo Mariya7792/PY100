@@ -1,0 +1,53 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  text: |
+    from logic import calculate_square_area
+
+
+    if __name__ == '__main__':
+        side_length = 5
+        area = calculate_square_area(side_length)
+        print(f"Функция `calculate_square_area` вызвана в модуле {__name__}")  # Печать переменной с названием модуля
+        print(f"Площадь квадрата со стороной {side_length} равна {area}")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Функция `calculate_square_area` вызвана в модуле __main__
+    Площадь квадрата со стороной 5 равна 25
+  learner_created: false
+- name: logic.py
+  visible: true
+  placeholders:
+  - offset: 70
+    length: 237
+    placeholder_text: |-
+      # TODO Поместите код в условие if __name__ == '__main__':
+      print(f"Функция `calculate_square_area` вызвана в модуле {__name__}")  # Печать переменной с названием модуля
+      print(calculate_square_area(2))  # код оставшийся от проверки функции
+    initial_state:
+      length: 237
+      offset: 70
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      if __name__ == '__main__':
+          print(f"Функция `calculate_square_area` вызвана в модуле {__name__}")  # Печать переменной с названием модуля
+          print(calculate_square_area(2))  # код оставшийся от проверки функции
+  text: |
+    def calculate_square_area(side_length):
+        return side_length ** 2
+
+
+    # TODO Поместите код в условие if __name__ == '__main__':
+    print(f"Функция `calculate_square_area` вызвана в модуле {__name__}")  # Печать переменной с названием модуля
+    print(calculate_square_area(2))  # код оставшийся от проверки функции
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,216 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 45
+    placeholder_text: '# TODO Напишите функцию calculate_average_age'
+    initial_state:
+      length: 45
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def calculate_average_age(students: list[dict]) -> float:
+          """Функция для вычисления среднего возраста учеников."""
+          total_age = sum([student['age'] for student in students])
+          avg_age = total_age / len(students)
+          return avg_age
+  - offset: 48
+    length: 46
+    placeholder_text: '# TODO Напишите функцию filter_students_by_age'
+    initial_state:
+      length: 46
+      offset: 48
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def filter_students_by_age(students: list[dict], filter_age: float) -> list[dict]:
+          """Функция для фильтрации списка учеников по возрасту."""
+          filtered = [student for student in students if student['age'] < filter_age]
+          return filtered
+  - offset: 582
+    length: 85
+    placeholder_text: |-
+      # TODO Вычислите средний возраст учеников
+          print("Средний возраст учеников:", ...)
+    initial_state:
+      length: 85
+      offset: 582
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      average_age = calculate_average_age(students_list)
+          print("Средний возраст учеников:", average_age)
+  - offset: 711
+    length: 156
+    placeholder_text: |-
+      # TODO Офильтруйте учеников
+          print("Список учеников с возрастом меньше среднего:")
+          for current_student in ...:
+              print(current_student['name'])
+    initial_state:
+      length: 156
+      offset: 711
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      filtered_students = filter_students_by_age(students_list, average_age)
+          print("Список учеников с возрастом меньше среднего:")
+          for current_student in filtered_students:
+              print(current_student['name'])
+  text: |
+    # TODO Напишите функцию calculate_average_age
+
+
+    # TODO Напишите функцию filter_students_by_age
+
+
+    if __name__ == '__main__':
+        # Пример списка учеников
+        students_list = [
+            {
+                "name": "Саша",
+                "age": 27,
+            },
+            {
+                "name": "Кирилл",
+                "age": 52,
+            },
+            {
+                "name": "Маша",
+                "age": 14,
+            },
+            {
+                "name": "Петя",
+                "age": 36,
+            },
+            {
+                "name": "Оля",
+                "age": 43,
+            },
+        ]
+
+        # Вычисление среднего возраста
+        # TODO Вычислите средний возраст учеников
+        print("Средний возраст учеников:", ...)
+
+        # Фильтрация учеников по возрасту
+        # TODO Офильтруйте учеников
+        print("Список учеников с возрастом меньше среднего:")
+        for current_student in ...:
+            print(current_student['name'])
+  learner_created: false
+- name: tests/test_task.py
+  visible: false
+  text: |
+    import ast
+    import unittest
+
+    try:
+        from task import calculate_average_age, filter_students_by_age
+    except ImportError:
+        raise AssertionError(
+            'Напишите функцию `calculate_average_age` и `filter_students_by_age`'
+        )
+
+
+    def contains_list_comprehension(code):
+        tree = ast.parse(code)
+        for node in ast.walk(tree):
+            if isinstance(node, ast.ListComp):
+                return True
+        return False
+
+
+    class TestCase(unittest.TestCase):
+        def test_contains_list_comprehension(self):
+            filepath = "task.py"
+            with open(filepath) as f:
+                assert contains_list_comprehension(f.read()) is True, (
+                    'Проверьте, что в функциях `calculate_average_age` и `filter_students_by_age`'
+                    ' используется list comprehension.'
+                )
+
+        def test_calculate_average_age(self):
+            students = [
+                {
+                    "name": "Саша",
+                    "age": 27,
+                },
+                {
+                    "name": "Кирилл",
+                    "age": 52,
+                },
+                {
+                    "name": "Маша",
+                    "age": 14,
+                },
+                {
+                    "name": "Петя",
+                    "age": 36,
+                },
+                {
+                    "name": "Оля",
+                    "age": 43,
+                },
+            ]
+            expected_value = 34.4
+            actual_value = calculate_average_age(students)
+
+            assert actual_value == expected_value, (
+                'Проверьте, что в функция `calculate_average_age` верно вычисляет средний возраст.'
+            )
+
+        def test_filter_students_by_age(self):
+            students = [
+                {
+                    "name": "Саша",
+                    "age": 27,
+                },
+                {
+                    "name": "Кирилл",
+                    "age": 52,
+                },
+                {
+                    "name": "Маша",
+                    "age": 14,
+                },
+                {
+                    "name": "Петя",
+                    "age": 36,
+                },
+                {
+                    "name": "Оля",
+                    "age": 43,
+                },
+            ]
+            expected_value = [
+                {
+                    "name": "Саша",
+                    "age": 27,
+                },
+                {
+                    "name": "Маша",
+                    "age": 14,
+                },
+            ]
+            actual_value = filter_students_by_age(students, calculate_average_age(students))
+
+            assert actual_value == expected_value, (
+                'Проверьте, что в функция `filter_students_by_age` верно фильтрует учеников.'
+            )
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/__init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1

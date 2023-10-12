@@ -1,0 +1,61 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 331
+    length: 57
+    placeholder_text: "...  # TODO подсчитать количество выпаданий орлов и решек"
+    initial_state:
+      length: 57
+      offset: 331
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      eagle_count = 0
+          tails_count = 0
+
+          for _ in range(count):
+              side = choice(coin)
+              if side == EAGLE:
+                  eagle_count += 1
+              else:
+                  tails_count += 1
+  - offset: 394
+    length: 98
+    placeholder_text: '# TODO разделить минимальное число среди орлов и решек на максимальное
+      число и сохранить результат'
+    initial_state:
+      length: 98
+      offset: 394
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      freq = min(eagle_count, tails_count) / max(eagle_count, tails_count)
+          list_freq.append(freq)
+  text: |
+    from random import choice
+
+
+    EAGLE = "Орел"
+    TAILS = "Решка"
+
+    coin = [EAGLE, TAILS]  # монета, для которой нужно выбрать случайную сторону
+    counts = [10, 100, 1000, 100000, 1000000]  # различное количество подбрасываний
+    list_freq = []  # список, где будем хранить отношение количества выпавших орлов к решке
+
+    for count in counts:
+        ...  # TODO подсчитать количество выпаданий орлов и решек
+
+        # TODO разделить минимальное число среди орлов и решек на максимальное число и сохранить результат
+
+    print(list_freq)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

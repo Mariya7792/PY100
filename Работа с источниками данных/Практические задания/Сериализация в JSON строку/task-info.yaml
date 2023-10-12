@@ -1,0 +1,66 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 31
+    placeholder_text: '# TODO Импортируйте модуль json'
+    initial_state:
+      length: 31
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: import json
+  - offset: 90
+    length: 64
+    placeholder_text: "...  # TODO Сериализуйте python объект в json строку с отст\
+      упами"
+    initial_state:
+      length: 64
+      offset: 90
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "return json.dumps(python_obj, indent=4)"
+  text: |
+    # TODO Импортируйте модуль json
+
+
+    def serialize_to_json_str(python_obj: dict) -> str:
+        ...  # TODO Сериализуйте python объект в json строку с отступами
+
+
+    if __name__ == '__main__':
+        decimal_to_hex = {decimal: hex(decimal) for decimal in range(16)}
+        json_str = serialize_to_json_str(decimal_to_hex)
+        print(json_str)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    {
+        "0": "0x0",
+        "1": "0x1",
+        "2": "0x2",
+        "3": "0x3",
+        "4": "0x4",
+        "5": "0x5",
+        "6": "0x6",
+        "7": "0x7",
+        "8": "0x8",
+        "9": "0x9",
+        "10": "0xa",
+        "11": "0xb",
+        "12": "0xc",
+        "13": "0xd",
+        "14": "0xe",
+        "15": "0xf"
+    }
+  learner_created: false
+status: Unchecked
+record: -1

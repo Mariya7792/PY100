@@ -1,0 +1,124 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 93
+    length: 68
+    placeholder_text: "...  # TODO Десериализуйте содержимое файла из переменной INPUT_FILE"
+    initial_state:
+      length: 68
+      offset: 93
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      with open(INPUT_FILE, encoding="utf-8") as f:
+              json_data = json.load(f)
+  - offset: 167
+    length: 67
+    placeholder_text: "...  # TODO Сериализуйте содержимое в файл из переменной INPUT_FILE"
+    initial_state:
+      length: 67
+      offset: 167
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+              json.dump(json_data, f, indent=4, ensure_ascii=False)
+  text: |
+    import json
+
+    INPUT_FILE = "input.json"
+    OUTPUT_FILE = "output.json"
+
+
+    def task() -> None:
+        ...  # TODO Десериализуйте содержимое файла из переменной INPUT_FILE
+
+        ...  # TODO Сериализуйте содержимое в файл из переменной INPUT_FILE
+
+
+    if __name__ == '__main__':
+        # Нужно для проверки задания
+        task()
+
+        with open(OUTPUT_FILE, encoding="utf-8") as output_f:
+            for line in output_f:
+                print(line, end="")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |-
+    [
+        {
+            "показатель": 0.00040403710013251447,
+            "id": 25007,
+            "density": 0.002539960237964018,
+            "contains_improvement_appeals": 1
+        },
+        {
+            "показатель": 0.001163313239749512,
+            "id": 22683,
+            "density": 0.007313113999411859,
+            "contains_improvement_appeals": 2
+        },
+        {
+            "показатель": 0.0014758329774510965,
+            "id": 22758,
+            "density": 0.00927775464028525,
+            "contains_improvement_appeals": 4
+        },
+        {
+            "показатель": 0.00027509937961621737,
+            "id": 22759,
+            "density": 0.001729399318737291,
+            "contains_improvement_appeals": 1
+        },
+        {
+            "показатель": 0.0008581744048815001,
+            "id": 22863,
+            "density": 0.005394873057257727,
+            "contains_improvement_appeals": 1
+        },
+        {
+            "показатель": 0.0017811335188311472,
+            "id": 22931,
+            "density": 0.011197012142826198,
+            "contains_improvement_appeals": 7
+        },
+        {
+            "показатель": 0.001498173150295026,
+            "id": 23072,
+            "density": 0.00941819508675468,
+            "contains_improvement_appeals": 16
+        },
+        {
+            "показатель": 0.00032502035941493046,
+            "id": 23103,
+            "density": 0.0020432252116747212,
+            "contains_improvement_appeals": 1
+        },
+        {
+            "показатель": 0.0015335808237345843,
+            "id": 23236,
+            "density": 0.009640783761472415,
+            "contains_improvement_appeals": 11
+        },
+        {
+            "показатель": 0.00047028097913217486,
+            "id": 23237,
+            "density": 0.0029563992694600187,
+            "contains_improvement_appeals": 1
+        }
+    ]
+  learner_created: false
+- name: input.json
+  visible: true
+  learner_created: false
+status: Unchecked
+record: -1

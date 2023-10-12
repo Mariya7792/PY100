@@ -1,0 +1,46 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 50
+    placeholder_text: |-
+      # TODO написать функцию index
+      def index():
+          ...
+    initial_state:
+      length: 50
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      from typing import Any
+
+
+      def index(list_: list, value: Any) -> list[int]:
+          list_index = [i for i, current_value in enumerate(list_) if current_value == value]
+          if not list_index:
+              raise ValueError("Значение не найдено")
+          return list_index
+  text: |
+    # TODO написать функцию index
+    def index():
+        ...
+
+
+    if __name__ == '__main__':
+        list_items = [1, 2, "3", 1]
+        print(index(list_items, 1) == [0, 3])  # True
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    True
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,36 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 59
+    length: 38
+    placeholder_text: '# TODO распечатать в столбик все имена'
+    initial_state:
+      length: 38
+      offset: 59
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      for student in list_students:
+          print(student)
+  text: |
+    list_students = ["Маша", "Петя", "Саша", "Кирилл", "Оля"]
+
+    # TODO распечатать в столбик все имена
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Маша
+    Петя
+    Саша
+    Кирилл
+    Оля
+  learner_created: false
+status: Unchecked
+record: -1

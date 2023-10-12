@@ -1,0 +1,98 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 22
+    length: 60
+    placeholder_text: "...)  # TODO записать условие с помощью операторов сравнени\
+      я"
+    initial_state:
+      length: 60
+      offset: 22
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 5 > 10)
+  - offset: 104
+    length: 60
+    placeholder_text: "...)  # TODO записать условие с помощью операторов сравнени\
+      я"
+    initial_state:
+      length: 60
+      offset: 104
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 5 == 10)
+  - offset: 186
+    length: 60
+    placeholder_text: "...)  # TODO записать условие с помощью операторов сравнени\
+      я"
+    initial_state:
+      length: 60
+      offset: 186
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 5 != 5)
+  - offset: 289
+    length: 60
+    placeholder_text: "...)  # TODO записать условие с помощью операторов сравнени\
+      я"
+    initial_state:
+      length: 60
+      offset: 289
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 5 <= 10)
+  - offset: 381
+    length: 60
+    placeholder_text: "...)  # TODO записать условие с помощью операторов сравнени\
+      я"
+    initial_state:
+      length: 60
+      offset: 381
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 5 <= 5)
+  - offset: 462
+    length: 60
+    placeholder_text: "...)  # TODO записать условие с помощью операторов сравнени\
+      я"
+    initial_state:
+      length: 60
+      offset: 462
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 5 == 5)
+  text: |
+    print("5 больше 10?", ...)  # TODO записать условие с помощью операторов сравнения
+    print("5 равно 10?", ...)  # TODO записать условие с помощью операторов сравнения
+    print("5 неравно 5", ...)  # TODO записать условие с помощью операторов сравнения
+
+    print()
+
+    print("5 меньше или равно 10?", ...)  # TODO записать условие с помощью операторов сравнения
+    print("5 меньше или равно 5?", ...)  # TODO записать условие с помощью операторов сравнения
+    print("5 равно 5?", ...)  # TODO записать условие с помощью операторов сравнения
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    5 больше 10? False
+    5 равно 10? False
+    5 неравно 5 False
+
+    5 меньше или равно 10? True
+    5 меньше или равно 5? True
+    5 равно 5? True
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,54 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 42
+    placeholder_text: '# TODO Напишите функцию `multiply_numbers`'
+    initial_state:
+      length: 42
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def multiply_numbers(a, b):
+          product = a * b
+          return product
+  - offset: 45
+    length: 95
+    placeholder_text: '# TODO Перемножте с помощью функции `multiply_numbers` при
+      пары чисел и распечатайте результаты'
+    initial_state:
+      length: 95
+      offset: 45
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      result1 = multiply_numbers(2, 3)
+      result2 = multiply_numbers(4, 5)
+      result3 = multiply_numbers(6, 7)
+
+      print(result1)
+      print(result2)
+      print(result3)
+  text: |
+    # TODO Напишите функцию `multiply_numbers`
+
+
+    # TODO Перемножте с помощью функции `multiply_numbers` при пары чисел и распечатайте результаты
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    6
+    20
+    42
+  learner_created: false
+status: Unchecked
+record: -1

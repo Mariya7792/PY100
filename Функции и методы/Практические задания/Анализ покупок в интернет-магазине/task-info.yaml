@@ -1,0 +1,50 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 41
+    placeholder_text: '# TODO Напишите функцию find_common_items'
+    initial_state:
+      length: 41
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def find_common_items(last_week_purchases, current_week_purchases):
+          common_purchases = list(set(last_week_purchases).intersection(current_week_purchases))
+          common_purchases.sort()
+          return common_purchases
+  - offset: 168
+    length: 63
+    placeholder_text: "print(f\"Общие товары: {...}\")  # TODO Распечатайте общие\
+      \ товары"
+    initial_state:
+      length: 63
+      offset: 168
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "print(f\"Общие товары: {find_common_items(last_week_items,\
+      \ current_week_items)}\")"
+  text: |
+    # TODO Напишите функцию find_common_items
+
+
+    last_week_items = ['книга', 'ноутбук', 'флешка', 'мышь']
+    current_week_items = ['ноутбук', 'флешка', 'наушники', 'монитор']
+
+    print(f"Общие товары: {...}")  # TODO Распечатайте общие товары
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Общие товары: ['ноутбук', 'флешка']
+  learner_created: false
+status: Unchecked
+record: -1

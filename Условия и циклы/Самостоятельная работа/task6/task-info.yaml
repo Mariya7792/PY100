@@ -1,0 +1,43 @@
+type: output
+files:
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    [2, 90, -2, 8, -36, -44, -1, -85, -14, 25, -22, -90, -100, -8, 38, -92, -45, 67, 53, 90]
+  learner_created: false
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 105
+    length: 50
+    placeholder_text: '# TODO Поменяйте местами значения согласно условию'
+    initial_state:
+      length: 50
+      offset: 105
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      max_index = 0
+      max_value = list_numbers[max_index]
+
+      # Находим максимальное значение и его индекс
+      for i, current_value in enumerate(list_numbers):
+          if current_value >= max_value:
+              max_value = current_value
+              max_index = i
+
+      # Меняем местами последний максимальный и последний элементы
+      list_numbers[max_index], list_numbers[-1] = list_numbers[-1], list_numbers[max_index]
+  text: |
+    list_numbers = [2, 90, -2, 8, -36, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -92, -45, 67, 53, 25]
+
+    # TODO Поменяйте местами значения согласно условию
+
+    print(list_numbers)  # Ответ [2, 90, -2, 8, -36, -44, -1, -85, -14, 25, -22, -90, -100, -8, 38, -92, -45, 67, 53, 90]
+  learner_created: false
+status: Unchecked
+record: -1

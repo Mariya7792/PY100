@@ -1,0 +1,29 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  text: |
+    import my_module  # Импортирование своего модуля
+    from my_other_module import CONST_VALUE_1, CONST_VALUE_2  # Импортирование переменных из другого модуля
+
+    my_module.say_hello()
+    print(CONST_VALUE_1, CONST_VALUE_2)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: my_module.py
+  visible: true
+  text: |
+    def say_hello():
+        print("Hello, World")
+  learner_created: false
+- name: my_other_module.py
+  visible: true
+  text: |
+    CONST_VALUE_1 = "Константное значение 1"
+    CONST_VALUE_2 = "Константное значение 2"
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

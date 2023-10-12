@@ -1,0 +1,47 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 85
+    placeholder_text: '# TODO Напишите функцию calculate_average_age для расчета среднего
+      возраста студентов'
+    initial_state:
+      length: 85
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def calculate_average_age(students):
+          all_ages = students.values()
+          average = sum(all_ages) / len(all_ages)
+          return average
+  - offset: 194
+    length: 94
+    placeholder_text: "print(f\"Средний возраст студентов: {...)} лет\")  # TODO Р\
+      аспечатайте средний возраст студентов"
+    initial_state:
+      length: 94
+      offset: 194
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "print(f\"Средний возраст студентов: {calculate_average_age(students_dict)}\"\
+      )"
+  text: "# TODO Напишите функцию calculate_average_age для расчета среднего возрас\
+    та студентов\n\n\nstudents_dict = {\n    'Саша': 27,\n    'Кирилл': 52, \n   \
+    \ 'Маша': 14, \n    'Петя': 36, \n    'Оля': 43, \n}\n\nprint(f\"Средний возра\
+    ст студентов: {...)} лет\")  # TODO Распечатайте средний возраст студентов\n"
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Средний возраст студентов: 34.4
+  learner_created: false
+status: Unchecked
+record: -1

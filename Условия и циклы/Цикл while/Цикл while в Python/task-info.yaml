@@ -1,0 +1,16 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  text: |
+    count = 0
+    while count < 5:
+        print("Значение count:", count)
+        count += 1
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

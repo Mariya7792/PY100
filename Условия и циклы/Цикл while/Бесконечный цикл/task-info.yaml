@@ -1,0 +1,36 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 36
+    length: 56
+    placeholder_text: "...  # TODO Запросите первое и последующие числа в цикле"
+    initial_state:
+      length: 56
+      offset: 36
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: '"stop"'
+  text: |
+    total = 0
+
+    while True:
+        number = ...  # TODO Запросите первое и последующие числа в цикле
+
+        if number == "stop":
+            break
+
+        total += int(number)  # Суммируем число с общей суммой
+
+    print("Сумма чисел:", total)  # Выводим общую сумму
+    print("Конец программы")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+solution_hidden: true
+post_submission_on_open: true

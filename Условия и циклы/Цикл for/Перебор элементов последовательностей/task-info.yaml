@@ -1,0 +1,36 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 69
+    length: 119
+    placeholder_text: |-
+      # TODO Заменить использование индексов на перебор значений списка
+      for i in range(len(numbers)):
+          total += numbers[i]
+    initial_state:
+      length: 119
+      offset: 69
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      for num in numbers:
+          total += num
+  text: |
+    numbers = [10, 20, 30, 40, 50]  # Объявление списка чисел
+
+    total = 0
+    # TODO Заменить использование индексов на перебор значений списка
+    for i in range(len(numbers)):
+        total += numbers[i]
+
+    print("Сумма чисел:", total)  # Сумма чисел: 150
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

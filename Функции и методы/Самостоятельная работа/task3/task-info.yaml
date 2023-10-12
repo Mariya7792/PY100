@@ -1,0 +1,46 @@
+type: output
+files:
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    True
+    True
+  learner_created: false
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 53
+    placeholder_text: |-
+      # TODO реализовать функцию count
+      def count():
+          ...
+    initial_state:
+      length: 53
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def count(list_, value):
+          count_value = 0
+          for current_value in list_:
+              if current_value == value:
+                  count_value += 1
+
+          return count_value
+  text: |
+    # TODO реализовать функцию count
+    def count():
+        ...
+
+
+    list_items = [1, 2, "3", 1]
+    print(count(list_items, 1) == list_items.count(1))  # True
+    print(count(list_items, 3) == list_items.count(3))  # True
+  learner_created: false
+status: Unchecked
+record: -1

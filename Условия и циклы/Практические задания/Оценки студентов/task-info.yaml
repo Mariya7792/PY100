@@ -1,0 +1,43 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 233
+    length: 57
+    placeholder_text: '# TODO Распечатать имена студентов с оценками выше тройки'
+    initial_state:
+      length: 57
+      offset: 233
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      # Печать имен студентов с оценкой выше тройки
+      for student in students:
+          if student["grade"] > 3:
+              print(f'{student["name"]}. Оценка: {student["grade"]}')
+  text: |
+    # Список словарей со студентами и их оценками
+    students = [
+        {"name": "Маша", "grade": 4},
+        {"name": "Петя", "grade": 3},
+        {"name": "Саша", "grade": 5},
+        {"name": "Кирилл", "grade": 2},
+        {"name": "Оля", "grade": 4},
+    ]
+
+    # TODO Распечатать имена студентов с оценками выше тройки
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Маша. Оценка: 4
+    Саша. Оценка: 5
+    Оля. Оценка: 4
+  learner_created: false
+status: Unchecked
+record: -1

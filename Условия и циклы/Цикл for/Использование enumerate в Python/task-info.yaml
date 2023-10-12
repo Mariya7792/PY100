@@ -1,0 +1,17 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  text: |
+    for tuple_ in enumerate(["а", "б", "в"]):  # перебираем кортежи с индексом и значением
+        print(tuple_)
+
+    for pos, value in enumerate("абв", start=1):  # start по умолчанию равен 0, но можно задать произвольное целое число
+        print("Позиция:", pos, "->", "Значение:", value)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

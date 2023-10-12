@@ -1,0 +1,33 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 57
+    length: 69
+    placeholder_text: '# TODO найдите и распечатайте количество уникальных символов
+      в строке'
+    initial_state:
+      length: 69
+      offset: 57
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      count_unique_chars = len(set(str_))
+      print(count_unique_chars)
+  text: |
+    str_ = "sdkfjsdkjfnksjdnfkjsdnfkjsndfkjsndfkjsndfkjsnd"
+
+    # TODO найдите и распечатайте количество уникальных символов в строке
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    6
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,32 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 68
+    length: 49
+    placeholder_text: "\"Hello, World\")  # TODO Поменяйте значение строки"
+    initial_state:
+      length: 49
+      offset: 68
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "\"Hello, World!!!\")"
+  text: |
+    def say_hello():  # Функция, которая печатает приветствие
+        print("Hello, World")  # TODO Поменяйте значение строки
+
+
+    say_hello()  # Вызов функции `say_hello`
+
+    ...  # Какой-то код программы
+
+    say_hello()  # Ещё один вызов функции `say_hello`
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

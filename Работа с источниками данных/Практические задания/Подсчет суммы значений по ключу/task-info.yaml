@@ -1,0 +1,58 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 63
+    length: 48
+    placeholder_text: "...  # TODO Десериализуйте содержимое JSON файла"
+    initial_state:
+      length: 48
+      offset: 63
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      with open(FILENAME) as f:
+              json_data = json.load(f)
+  - offset: 117
+    length: 76
+    placeholder_text: "...  # TODO Просуммируйте все значения по ключу contains_improvement_appeals"
+    initial_state:
+      length: 76
+      offset: 117
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      list_values = [item["contains_improvement_appeals"] for item in json_data]
+          return sum(list_values)
+  text: |
+    import json
+
+
+    FILENAME = "input.json"
+
+
+    def task() -> int:
+        ...  # TODO Десериализуйте содержимое JSON файла
+
+        ...  # TODO Просуммируйте все значения по ключу contains_improvement_appeals
+
+
+    if __name__ == '__main__':
+        print(task())
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: input.json
+  visible: true
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    1418
+  learner_created: false
+status: Unchecked
+record: -1

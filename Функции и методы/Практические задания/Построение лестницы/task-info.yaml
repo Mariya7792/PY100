@@ -1,0 +1,60 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 36
+    placeholder_text: '# TODO Напишите функцию print_stairs'
+    initial_state:
+      length: 36
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def print_stairs(count_stairs=4):
+          for i in range(1, count_stairs + 1):
+              print("*" * i)
+  - offset: 39
+    length: 62
+    placeholder_text: '# TODO вызвать функцию без аргументов и с аргументом равным
+      10'
+    initial_state:
+      length: 62
+      offset: 39
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      print_stairs()
+      print_stairs(10)
+  text: |
+    # TODO Напишите функцию print_stairs
+
+
+    # TODO вызвать функцию без аргументов и с аргументом равным 10
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    *
+    **
+    ***
+    ****
+    *
+    **
+    ***
+    ****
+    *****
+    ******
+    *******
+    ********
+    *********
+    **********
+  learner_created: false
+status: Unchecked
+record: -1

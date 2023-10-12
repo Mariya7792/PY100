@@ -1,0 +1,40 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 11
+    length: 3
+    placeholder_text: '...'
+    initial_state:
+      length: 3
+      offset: 11
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: or
+  - offset: 61
+    length: 3
+    placeholder_text: '...'
+    initial_state:
+      length: 3
+      offset: 61
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: and
+  text: |
+    print(True ... False)  # ожидаемый результат True
+    print(True ... False)  # ожидаемый результат False
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    True
+    False
+  learner_created: false
+status: Unchecked
+record: -1

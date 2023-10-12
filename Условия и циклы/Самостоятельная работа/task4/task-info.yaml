@@ -1,0 +1,45 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 39
+    placeholder_text: '# TODO завести счетчик для произведения'
+    initial_state:
+      length: 39
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: mul = 1
+  - offset: 40
+    length: 35
+    placeholder_text: '# TODO посчитать произведение чисел'
+    initial_state:
+      length: 35
+      offset: 40
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      last_number = 10
+
+      for number in range(1, last_number + 1):
+          mul *= number
+
+      print(mul)
+  text: |
+    # TODO завести счетчик для произведения
+    # TODO посчитать произведение чисел
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    3628800
+  learner_created: false
+status: Unchecked
+record: -1

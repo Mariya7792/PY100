@@ -1,0 +1,39 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 105
+    length: 61
+    placeholder_text: "# TODO записать условный оператор, который распечатает стро\
+      ку"
+    initial_state:
+      length: 61
+      offset: 105
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      if inside_condition:
+              print("Ещё один условный оператор")
+  text: |
+    outside_condition = True
+    inside_condition = True
+
+    if outside_condition:
+        print("Условие истинно")
+        # TODO записать условный оператор, который распечатает строку
+    else:
+        print("Условие ложно")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Условие истинно
+    Ещё один условный оператор
+  learner_created: false
+status: Unchecked
+record: -1

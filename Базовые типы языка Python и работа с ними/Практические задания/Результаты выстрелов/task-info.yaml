@@ -1,0 +1,53 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 45
+    length: 210
+    placeholder_text: |-
+      # TODO Вычислите необходимые значения
+      ...
+
+      print("Среднее арифметическое результатов выстрелов:", ...)
+      print("Наименьшее количество очков за выстрел:", ...)
+      print("Наибольшее количество очков за выстрел:", ...)
+    initial_state:
+      length: 210
+      offset: 45
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      total = sum(results)
+      count = len(results)
+      average = total / count
+
+      min_score = min(results)
+      max_score = max(results)
+
+      print("Среднее арифметическое результатов выстрелов:", average)
+      print("Наименьшее количество очков за выстрел:", min_score)
+      print("Наибольшее количество очков за выстрел:", max_score)
+  text: |
+    results = [10, 8, 9, 7, 6, 9, 10, 8, 9, 10]
+
+    # TODO Вычислите необходимые значения
+    ...
+
+    print("Среднее арифметическое результатов выстрелов:", ...)
+    print("Наименьшее количество очков за выстрел:", ...)
+    print("Наибольшее количество очков за выстрел:", ...)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Среднее арифметическое результатов выстрелов: 8.6
+    Наименьшее количество очков за выстрел: 6
+    Наибольшее количество очков за выстрел: 10
+  learner_created: false
+status: Unchecked
+record: -1

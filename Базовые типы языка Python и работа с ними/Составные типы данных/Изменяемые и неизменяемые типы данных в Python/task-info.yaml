@@ -1,0 +1,35 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 33
+    placeholder_text: '# TODO исправьте опечатку в слове'
+    initial_state:
+      length: 33
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      fruits = ["яблоко", "банан", "опельсин", "виноград"]  # список фруктов
+
+      incorrect_word = fruits[2]  # получаем из списка слово с опечаткой
+      correct_word = "а" + incorrect_word[1:]  # исправляем слово с опечаткой, путем создания нового слова
+
+      fruits[2] = correct_word  # заменяем слово в списке
+      print(fruits)
+  text: |
+    # TODO исправьте опечатку в слове
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    ['яблоко', 'банан', 'апельсин', 'виноград']
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,25 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  text: |
+    # Обращение к элементам словаря с помощью метода
+    student_scores = {"John": 85, "Jane": 92, "Alice": 78}
+    print(student_scores.get("John"))  # 85
+    print(student_scores.get("Bob"))  # None
+
+    student_scores = {"John": 85, "Jane": 92, "Alice": 78}
+    # Итерирование по значениям словаря
+    for score in student_scores.values():
+        print(score)
+
+    # Итерирование по парам ключ-значение словаря
+    for item in student_scores.items():
+        print(item)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

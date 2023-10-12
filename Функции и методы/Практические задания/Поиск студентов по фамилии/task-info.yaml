@@ -1,0 +1,46 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 56
+    length: 58
+    placeholder_text: "...  # TODO Напишите проверку студента с заданной фамилией"
+    initial_state:
+      length: 58
+      offset: 56
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      for student in students:
+              if student['фамилия'] == lastname:
+                  return True
+          return False
+  text: |
+    def exists_student_by_lastname(students, lastname):
+        ...  # TODO Напишите проверку студента с заданной фамилией
+
+
+    students_list = [
+        {'имя': 'Иван', 'фамилия': 'Иванов'},
+        {'имя': 'Петр', 'фамилия': 'Петров'},
+        {'имя': 'Анна', 'фамилия': 'Иванова'},
+        {'имя': 'Елена', 'фамилия': 'Сидорова'},
+    ]
+
+    for find_lastname in ['Иванов', 'Пупкин']:
+        is_exists_lastname = exists_student_by_lastname(students_list, find_lastname)
+        print(f"Есть ли в базе студент с фамилией {find_lastname}? {is_exists_lastname}")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Есть ли в базе студент с фамилией Иванов? True
+    Есть ли в базе студент с фамилией Пупкин? False
+  learner_created: false
+status: Unchecked
+record: -1

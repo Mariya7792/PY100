@@ -1,0 +1,90 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 13
+    length: 36
+    placeholder_text: "...  # TODO сформировать список цифр"
+    initial_state:
+      length: 36
+      offset: 13
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "[4, 9, 5, 1, 8, 4]"
+  - offset: 89
+    length: 23
+    placeholder_text: "...)  # TODO сумма цифр"
+    initial_state:
+      length: 23
+      offset: 89
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: sum(list_digit))
+  - offset: 138
+    length: 28
+    placeholder_text: "...)  # TODO количество цифр"
+    initial_state:
+      length: 28
+      offset: 138
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: len(list_digit))
+  - offset: 194
+    length: 30
+    placeholder_text: "...)  # TODO минимальная цифра"
+    initial_state:
+      length: 30
+      offset: 194
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: min(list_digit))
+  - offset: 253
+    length: 31
+    placeholder_text: "...)  # TODO максимальная цифра"
+    initial_state:
+      length: 31
+      offset: 253
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: max(list_digit))
+  - offset: 322
+    length: 40
+    placeholder_text: "...)  # TODO среднее арифметическое цифр"
+    initial_state:
+      length: 40
+      offset: 322
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "round(sum(list_digit) / len(list_digit), 2))"
+  text: |
+    list_digit = ...  # TODO сформировать список цифр
+    print(list_digit)
+
+    print("Сумма цифр", ...)  # TODO сумма цифр
+    print("Количество цифр", ...)  # TODO количество цифр
+    print("Минимальная цифра", ...)  # TODO минимальная цифра
+    print("Максимальная цифра", ...)  # TODO максимальная цифра
+    print("Среднее арифметическое цифр", ...)  # TODO среднее арифметическое цифр
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    [4, 9, 5, 1, 8, 4]
+    Сумма цифр 31
+    Количество цифр 6
+    Минимальная цифра 1
+    Максимальная цифра 9
+    Среднее арифметическое цифр 5.17
+  learner_created: false
+status: Unchecked
+record: -1

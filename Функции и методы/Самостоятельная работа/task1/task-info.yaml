@@ -1,0 +1,48 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 59
+    placeholder_text: |-
+      # TODO реализовать функцию
+      def remove_whitespace():
+          ...
+    initial_state:
+      length: 59
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def remove_whitespace(str_):
+          words_list = str_.split(" ")
+
+          words_list_without_empty_string = []
+          for word in words_list:
+              if word:
+                  words_list_without_empty_string.append(word)
+
+          return " ".join(words_list_without_empty_string)
+  text: |
+    # TODO реализовать функцию
+    def remove_whitespace():
+        ...
+
+
+    str_with_space = """123.    test bks
+    print   test11"""  # исходная строка
+    print(remove_whitespace(str_with_space))
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    123. test bks
+    print test11
+  learner_created: false
+status: Unchecked
+record: -1

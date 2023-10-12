@@ -1,0 +1,60 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 14
+    length: 359
+    placeholder_text: |-
+      # TODO переписать через if-elif-else
+      if x > 0:
+          if y > 0:               # x > 0, y > 0
+              print("Первая четверть")
+          else:                   # x > 0, y < 0
+              print("Четвертая четверть")
+      else:
+          if y > 0:               # x < 0, y > 0
+              print("Вторая четверть")
+          else:                   # x < 0, y < 0
+              print("Третья четверть")
+    initial_state:
+      length: 359
+      offset: 14
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      if x > 0 and y > 0:  # x > 0, y > 0
+          print("Первая четверть")
+      elif x < 0 and y > 0:  # x < 0, y > 0
+          print("Вторая четверть")
+      elif x < 0 and y < 0:  # x < 0, y < 0
+          print("Третья четверть")
+      elif x > 0 and y < 0:  # x > 0, y < 0
+          print("Четвертая четверть")
+  text: |
+    x = 1
+    y = -1
+
+    # TODO переписать через if-elif-else
+    if x > 0:
+        if y > 0:               # x > 0, y > 0
+            print("Первая четверть")
+        else:                   # x > 0, y < 0
+            print("Четвертая четверть")
+    else:
+        if y > 0:               # x < 0, y > 0
+            print("Вторая четверть")
+        else:                   # x < 0, y < 0
+            print("Третья четверть")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Четвертая четверть
+  learner_created: false
+status: Unchecked
+record: -1

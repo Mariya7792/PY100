@@ -1,0 +1,53 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 38
+    placeholder_text: '# TODO Напишите функцию decimal_to_hex'
+    initial_state:
+      length: 38
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def decimal_to_hex() -> dict[int, str]:
+          """
+          Функция для создания словаря с десятичными числами и их шестнадцатеричными представлениями.
+
+          Возвращаемое значение:
+          dict: Словарь с преобразованными значениями.
+          """
+          return {decimal: hex(decimal) for decimal in range(16)}
+  - offset: 72
+    length: 75
+    placeholder_text: "...  # TODO Распечатайте словарь с десятичными и шестнадцат\
+      еричными числами"
+    initial_state:
+      length: 75
+      offset: 72
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      converted_dict = decimal_to_hex()
+          print(converted_dict)
+  text: |
+    # TODO Напишите функцию decimal_to_hex
+
+
+    if __name__ == '__main__':
+        ...  # TODO Распечатайте словарь с десятичными и шестнадцатеричными числами
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    {0: '0x0', 1: '0x1', 2: '0x2', 3: '0x3', 4: '0x4', 5: '0x5', 6: '0x6', 7: '0x7', 8: '0x8', 9: '0x9', 10: '0xa', 11: '0xb', 12: '0xc', 13: '0xd', 14: '0xe', 15: '0xf'}
+  learner_created: false
+status: Unchecked
+record: -1

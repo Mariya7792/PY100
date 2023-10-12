@@ -1,0 +1,34 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 17
+    length: 26
+    placeholder_text: '# TODO распечатать лесенку'
+    initial_state:
+      length: 26
+      offset: 17
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      for i in range(count_stairs, 0, -1):
+          print("*" * i)
+  text: |
+    count_stairs = 4
+    # TODO распечатать лесенку
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    ****
+    ***
+    **
+    *
+  learner_created: false
+status: Unchecked
+record: -1

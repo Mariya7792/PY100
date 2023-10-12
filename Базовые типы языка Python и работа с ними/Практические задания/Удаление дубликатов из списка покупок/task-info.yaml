@@ -1,0 +1,38 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 83
+    length: 95
+    placeholder_text: |-
+      ...  # TODO Найдите количество уникальных товаров
+
+      print("Количество уникальных товаров:", ...)
+    initial_state:
+      length: 95
+      offset: 83
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      unique_items = set(shopping_list)
+
+      print("Количество уникальных товаров:", len(unique_items))
+  text: |
+    shopping_list = ["яблоко", "молоко", "хлеб", "яблоко", "масло", "яйца", "молоко"]
+
+    ...  # TODO Найдите количество уникальных товаров
+
+    print("Количество уникальных товаров:", ...)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Количество уникальных товаров: 5
+  learner_created: false
+status: Unchecked
+record: -1

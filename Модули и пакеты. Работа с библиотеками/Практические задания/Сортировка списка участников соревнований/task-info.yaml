@@ -1,0 +1,57 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 41
+    placeholder_text: '# TODO Напишите функцию sort_participants'
+    initial_state:
+      length: 41
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def sort_participants(participants: list[dict]) -> list[dict]:
+          return sorted(participants, key=lambda item: item["name"])
+  text: |
+    # TODO Напишите функцию sort_participants
+
+
+    if __name__ == "__main__":
+        participants_list = [
+            {
+                "name": "Саша",
+                "age": 27,
+            },
+            {
+                "name": "Кирилл",
+                "age": 52,
+            },
+            {
+                "name": "Маша",
+                "age": 14,
+            },
+            {
+                "name": "Петя",
+                "age": 36,
+            },
+            {
+                "name": "Оля",
+                "age": 43,
+            },
+        ]
+
+        print(sort_participants(participants_list))
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    [{'name': 'Кирилл', 'age': 52}, {'name': 'Маша', 'age': 14}, {'name': 'Оля', 'age': 43}, {'name': 'Петя', 'age': 36}, {'name': 'Саша', 'age': 27}]
+  learner_created: false
+status: Unchecked
+record: -1

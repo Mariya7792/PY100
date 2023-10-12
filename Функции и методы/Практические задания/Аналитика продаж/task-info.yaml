@@ -1,0 +1,56 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 43
+    length: 78
+    placeholder_text: "...  # TODO Вычислите общую стоимость проданных товаров из\
+      \ списка `sales_list`"
+    initial_state:
+      length: 78
+      offset: 43
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      total = 0
+          for sale in sales_list:
+              total += sale["quantity"] * sale["price_per_unit"]
+
+          return total
+  - offset: 359
+    length: 103
+    placeholder_text: "...  # TODO Вызовете функцию calculate_total_sales и переда\
+      йте в функцию значение переменной sales_data"
+    initial_state:
+      length: 103
+      offset: 359
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: calculate_total_sales(sales_data)
+  text: |
+    def calculate_total_sales(sales_list):
+        ...  # TODO Вычислите общую стоимость проданных товаров из списка `sales_list`
+
+
+    sales_data = [
+        {"product": "Футболка", "quantity": 10, "price_per_unit": 500},
+        {"product": "Джинсы", "quantity": 5, "price_per_unit": 1000},
+        {"product": "Кроссовки", "quantity": 3, "price_per_unit": 1500},
+    ]
+
+    total_sales = ...  # TODO Вызовете функцию calculate_total_sales и передайте в функцию значение переменной sales_data
+    print(f"Общая стоимость проданных товаров: {total_sales}")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Общая стоимость проданных товаров: 14500
+  learner_created: false
+status: Unchecked
+record: -1

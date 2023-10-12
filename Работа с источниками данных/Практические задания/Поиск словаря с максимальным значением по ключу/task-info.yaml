@@ -1,0 +1,57 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 64
+    length: 41
+    placeholder_text: "...  # TODO считать содержимое JSON файла"
+    initial_state:
+      length: 41
+      offset: 64
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      with open(FILENAME) as f:
+              json_data = json.load(f)
+  - offset: 111
+    length: 53
+    placeholder_text: "...  # TODO найти максимальный элемент по ключу score"
+    initial_state:
+      length: 53
+      offset: 111
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "return max(json_data, key=lambda item: item[\"score\"\
+      ])"
+  text: |
+    import json
+
+
+    FILENAME = "input.json"
+
+
+    def task() -> dict:
+        ...  # TODO считать содержимое JSON файла
+
+        ...  # TODO найти максимальный элемент по ключу score
+
+
+    if __name__ == '__main__':
+        print(task())
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    {'score': 0.12801590412849398, 'id': 24472, 'density': 0.804765963835364, 'contains_improvement_appeals': 13}
+  learner_created: false
+- name: input.json
+  visible: true
+  learner_created: false
+status: Unchecked
+record: -1

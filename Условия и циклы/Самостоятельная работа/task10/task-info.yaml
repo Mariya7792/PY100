@@ -1,0 +1,68 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 43
+    length: 61
+    placeholder_text: '# TODO завести отдельные счетчики для четных и нечетных чисел'
+    initial_state:
+      length: 61
+      offset: 43
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      count_even = 0  # количество четных чисел
+      count_odd = 0  # количество нечетных чисел
+  - offset: 106
+    length: 90
+    placeholder_text: '# TODO с помощью одного цикла перебрать все числа и посчитать
+      количество четных и нечетных'
+    initial_state:
+      length: 90
+      offset: 106
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      for value in list_:  # перебираем все числа
+          if value % 2 == 0:
+              count_even += 1
+          else:
+              count_odd += 1
+  - offset: 198
+    length: 33
+    placeholder_text: '# TODO вывести каких чисел больше'
+    initial_state:
+      length: 33
+      offset: 198
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      if count_even > count_odd:
+          print('Четных чисел больше')
+      elif count_even < count_odd:
+          print('Нечетных чисел больше')
+      else:
+          print('Четных и нечетных одинаковое количество')
+  text: |
+    list_ = [3, 4, 8, 9, 6, 6, 2, 4, 3, 3, 1]
+
+    # TODO завести отдельные счетчики для четных и нечетных чисел
+
+    # TODO с помощью одного цикла перебрать все числа и посчитать количество четных и нечетных
+
+    # TODO вывести каких чисел больше
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Четных чисел больше
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,35 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 57
+    placeholder_text: "# TODO написать функцию, которая выдает трехзначное число"
+    initial_state:
+      length: 57
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      from random import randint
+
+
+      def get_random_number() -> int:
+          random_digits = [randint(0, 9) for _ in range(3)]
+          str_number = "".join([str(digit) for digit in random_digits])
+
+          return int(str_number)
+
+
+      print(get_random_number())
+  text: |
+    # TODO написать функцию, которая выдает трехзначное число
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

@@ -1,0 +1,43 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 35
+    length: 70
+    placeholder_text: "...  # TODO реализовать функцию удаления элемента из списка\
+      \ по индексу"
+    initial_state:
+      length: 70
+      offset: 35
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      if index is None:
+              index = len(list_) - 1
+          elif index < 0:
+              index = len(list_) + index
+
+          return list_[:index] + list_[index + 1:]
+  text: |
+    def delete(list_, index=None):
+        ...  # TODO реализовать функцию удаления элемента из списка по индексу
+
+
+    print(delete([0, 1, 2], index=0))  # [0, 1]
+    print(delete([0, 1, 2], index=1))  # [0, 2]
+    print(delete([0, 1, 2]))  # [0, 1]
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    [1, 2]
+    [0, 2]
+    [0, 1]
+  learner_created: false
+status: Unchecked
+record: -1

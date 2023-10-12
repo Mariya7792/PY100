@@ -1,0 +1,40 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 58
+    placeholder_text: |-
+      # TODO реализовать функцию
+      def get_unique_words():
+          ...
+    initial_state:
+      length: 58
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      def get_unique_words(str_words):
+          unique_words = list(set(str_words.split()))
+          unique_words.sort()
+          return unique_words
+  text: |
+    # TODO реализовать функцию
+    def get_unique_words():
+        ...
+
+
+    print(get_unique_words("Здесь много разных слов. Возможно и много повторений."))
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    ['Возможно', 'Здесь', 'и', 'много', 'повторений.', 'разных', 'слов.']
+  learner_created: false
+status: Unchecked
+record: -1

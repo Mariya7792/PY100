@@ -1,0 +1,22 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  text: |
+    name = "Анна"
+    age = 25
+    print(f"Привет, меня зовут {name} и мне {age} лет.")  # Вставка переменных внутрь текста
+
+    x = 10
+    y = 3
+    print(f"Сумма чисел {x} и {y} равна {x + y}.")  # Внутри f-строк можно делать вычисления
+
+    number = 3.14159
+    print(f"Число Пи: {number:.2f}")  # Округление числа до двух знаков после запятой
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true
