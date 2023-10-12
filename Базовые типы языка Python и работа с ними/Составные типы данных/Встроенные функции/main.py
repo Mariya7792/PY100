@@ -1,4 +1,4 @@
-list_digit = ...  # TODO сформировать список цифр
+list_digit = list(4, 9, 5, 1, 8, 4)  # TODO сформировать список цифр
 print(list_digit)
 
 print("Сумма цифр", ...)  # TODO сумма цифр

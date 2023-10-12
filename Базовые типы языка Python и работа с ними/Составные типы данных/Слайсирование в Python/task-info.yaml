@@ -4,14 +4,14 @@ files:
   visible: true
   placeholders:
   - offset: 33
-    length: 52
+    length: 10
     placeholder_text: "...  # TODO Разверните слово с помощью слайсирования"
     initial_state:
       length: 52
       offset: 33
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: "word[::-1]"
   text: |
     word = "телефон"
@@ -29,5 +29,8 @@ files:
 - name: sequence_slice_step.png
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 12 Oct 2023 16:30:34 UTC"
 record: -1

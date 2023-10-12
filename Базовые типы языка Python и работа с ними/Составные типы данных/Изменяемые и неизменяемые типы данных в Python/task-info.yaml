@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       fruits = ["яблоко", "банан", "опельсин", "виноград"]  # список фруктов
 
@@ -31,5 +31,8 @@ files:
   text: |
     ['яблоко', 'банан', 'апельсин', 'виноград']
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 12 Oct 2023 16:40:06 UTC"
 record: -1

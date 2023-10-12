@@ -3,17 +3,17 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 13
-    length: 36
+  - offset: 36
+    length: 32
     placeholder_text: "...  # TODO сформировать список цифр"
     initial_state:
       length: 36
       offset: 13
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: "[4, 9, 5, 1, 8, 4]"
-  - offset: 89
+  - offset: 108
     length: 23
     placeholder_text: "...)  # TODO сумма цифр"
     initial_state:
@@ -23,7 +23,7 @@ files:
     selected: false
     status: Unchecked
     encrypted_possible_answer: sum(list_digit))
-  - offset: 138
+  - offset: 157
     length: 28
     placeholder_text: "...)  # TODO количество цифр"
     initial_state:
@@ -33,7 +33,7 @@ files:
     selected: false
     status: Unchecked
     encrypted_possible_answer: len(list_digit))
-  - offset: 194
+  - offset: 213
     length: 30
     placeholder_text: "...)  # TODO минимальная цифра"
     initial_state:
@@ -43,7 +43,7 @@ files:
     selected: false
     status: Unchecked
     encrypted_possible_answer: min(list_digit))
-  - offset: 253
+  - offset: 272
     length: 31
     placeholder_text: "...)  # TODO максимальная цифра"
     initial_state:
@@ -53,7 +53,7 @@ files:
     selected: false
     status: Unchecked
     encrypted_possible_answer: max(list_digit))
-  - offset: 322
+  - offset: 341
     length: 40
     placeholder_text: "...)  # TODO среднее арифметическое цифр"
     initial_state:
