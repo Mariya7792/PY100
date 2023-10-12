@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 186
-    length: 95
+    length: 94
     placeholder_text: "...  # TODO перевести скорость скачивания из байт в килобай\
       ты, если 1 килобайт = 1024 байта"
     initial_state:
@@ -12,37 +12,37 @@ files:
       offset: 180
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: speed / 1024
-  - offset: 296
-    length: 44
+  - offset: 295
+    length: 43
     placeholder_text: "...  # TODO перевести время в секунды"
     initial_state:
       length: 37
       offset: 286
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: time * 60
-  - offset: 407
-    length: 24
+  - offset: 424
+    length: 34
     placeholder_text: "...  # TODO размер файла"
     initial_state:
       length: 24
       offset: 390
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: "time_in_sec * speed_in_kb_in_sec  # размер файла"
-  - offset: 446
-    length: 27
+  - offset: 473
+    length: 56
     placeholder_text: "...  # TODO стоимость файла"
     initial_state:
       length: 27
       offset: 429
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: "(file_size - free_traffic) * cost  # стоимость фай\
       ла"
   text: |
@@ -69,5 +69,8 @@ files:
     Размер файла в килобайтах = 28800.0
     За трафик придется заплатить: 3537.5
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 12 Oct 2023 16:08:53 UTC"
 record: -1
