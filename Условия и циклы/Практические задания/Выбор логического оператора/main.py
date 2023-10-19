@@ -1,2 +1,2 @@
-print(True ... False)  # ожидаемый результат True
-print(True ... False)  # ожидаемый результат False
+print(True or False)  # ожидаемый результат True
+print(True and False)  # ожидаемый результат False

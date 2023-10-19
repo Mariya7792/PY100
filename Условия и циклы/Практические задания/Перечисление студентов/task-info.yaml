@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 59
+  - offset: 96
     length: 38
     placeholder_text: '# TODO распечатать в столбик все имена'
     initial_state:
@@ -11,7 +11,7 @@ files:
       offset: 59
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       for student in list_students:
           print(student)
@@ -32,5 +32,8 @@ files:
     Кирилл
     Оля
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 19 Oct 2023 17:09:43 UTC"
 record: -1

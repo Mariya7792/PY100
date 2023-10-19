@@ -4,16 +4,16 @@ files:
   visible: true
   placeholders:
   - offset: 11
-    length: 3
+    length: 2
     placeholder_text: '...'
     initial_state:
       length: 3
       offset: 11
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: or
-  - offset: 61
+  - offset: 60
     length: 3
     placeholder_text: '...'
     initial_state:
@@ -21,7 +21,7 @@ files:
       offset: 61
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: and
   text: |
     print(True ... False)  # ожидаемый результат True
@@ -36,5 +36,8 @@ files:
     True
     False
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 19 Oct 2023 16:50:01 UTC"
 record: -1

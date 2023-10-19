@@ -14,7 +14,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       BYTES_ONE_CHAR = 4  # размер одного символа в байтах
 
@@ -46,6 +46,6 @@ files:
 - name: bytes_table.png
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 solution_hidden: true

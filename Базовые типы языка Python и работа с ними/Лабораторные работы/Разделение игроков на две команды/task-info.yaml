@@ -11,7 +11,7 @@ files:
       offset: 66
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       # индекс середины
       middle_index = len(list_players) // 2
@@ -35,6 +35,6 @@ files:
     ['Маша', 'Петя', 'Саша']
     ['Оля', 'Кирилл', 'Коля']
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 solution_hidden: true

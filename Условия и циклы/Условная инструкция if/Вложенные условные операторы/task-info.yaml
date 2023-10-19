@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 105
+  - offset: 174
     length: 61
     placeholder_text: "# TODO записать условный оператор, который распечатает стро\
       ку"
@@ -12,7 +12,7 @@ files:
       offset: 105
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       if inside_condition:
               print("Ещё один условный оператор")
@@ -35,5 +35,8 @@ files:
     Условие истинно
     Ещё один условный оператор
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 19 Oct 2023 16:03:03 UTC"
 record: -1

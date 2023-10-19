@@ -14,7 +14,7 @@ files:
       offset: 102
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: |-
       index_missing_item = 4
 
@@ -39,14 +39,6 @@ files:
   text: |
     Измененный список: [2, -93, -2, 8, -15.65, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -92, -45, 67, 53, 25]
   learner_created: false
-status: Failed
-feedback:
-  message: Incorrect
-  time: "Thu, 12 Oct 2023 18:07:59 UTC"
-  expected: |
-    Измененный список: [2, -93, -2, 8, -15.65, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -92, -45, 67, 53, 25]
-  actual: |
-    -14.944444444444445
-    Измененный список: Ellipsis
+status: Solved
 record: -1
 solution_hidden: true

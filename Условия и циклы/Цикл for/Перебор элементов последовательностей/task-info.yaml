@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 69
-    length: 119
+    length: 102
     placeholder_text: |-
       # TODO Заменить использование индексов на перебор значений списка
       for i in range(len(numbers)):
@@ -13,8 +13,8 @@ files:
       length: 119
       offset: 69
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       for num in numbers:
           total += num
@@ -31,6 +31,6 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 post_submission_on_open: true

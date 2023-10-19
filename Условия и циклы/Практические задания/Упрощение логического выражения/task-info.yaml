@@ -4,15 +4,15 @@ files:
   visible: true
   placeholders:
   - offset: 125
-    length: 122
+    length: 109
     placeholder_text: "is_active == True and is_blocked != False:  # TODO Избавьте\
       сь от операторов сравния при работе с логическими типами данных"
     initial_state:
       length: 122
       offset: 125
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: 'is_active and not is_blocked:'
   text: |
     is_active = True  # Статус активен пользователь или нет
@@ -26,6 +26,6 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 post_submission_on_open: true

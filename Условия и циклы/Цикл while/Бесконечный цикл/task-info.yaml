@@ -11,7 +11,7 @@ files:
       offset: 36
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '"stop"'
   text: |
     total = 0
@@ -30,7 +30,7 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 solution_hidden: true
 post_submission_on_open: true
