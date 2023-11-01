@@ -1,7 +1,22 @@
-# TODO  Напишите функцию count_letters
+def count_letters(text):
+    low_text = text.lower()
+    letters_dictionary = {}
+    for letter in low_text:
+        count = 0
+        for symbol in low_text:
+            if symbol == letter:
+                count += 1
+        if letter.isalpha():
+            letters_dictionary[letter] = count
+    return letters_dictionary
 
 
-# TODO Напишите функцию calculate_frequency
+def calculate_frequency(frequency):
+    letters_dictionary = count_letters(main_str)
+    new_dictionary = {}
+    for i in letters_dictionary.keys():
+        new_dictionary[i] = int(letters_dictionary.values()) / int(letters_dictionary.values())
+    return new_dictionary
 
 
 main_str = """
