@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 437
+  - offset: 525
     length: 38
     placeholder_text: '# TODO распечатать фамилии и их номера'
     initial_state:
@@ -11,7 +11,7 @@ files:
       offset: 437
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       for rank, surname in enumerate(surname_list, start=1):
           print(f"{rank:2} {surname}")
@@ -78,5 +78,5 @@ files:
     24 Никитин
     25 Соловьёв
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

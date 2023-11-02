@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def factorial(n):
           if n == 0:
@@ -22,7 +22,7 @@ files:
               result *= num
 
           return result
-  - offset: 38
+  - offset: 199
     length: 139
     placeholder_text: "# TODO Вызовите функцию factorial и распечатайте результат\
       \ \nprint(f\"Факториал числа 0 равен {...}\")\nprint(f\"Факториал числа 5 ра\
@@ -32,7 +32,7 @@ files:
       offset: 38
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       print(f"Факториал числа 0 равен {factorial(0)}")
       print(f"Факториал числа 5 равен {factorial(5)}")
@@ -49,5 +49,5 @@ files:
     Факториал числа 0 равен 1
     Факториал числа 5 равен 120
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

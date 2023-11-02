@@ -3,45 +3,45 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 186
-    length: 94
+  - offset: 180
+    length: 91
     placeholder_text: "...  # TODO перевести скорость скачивания из байт в килобай\
       ты, если 1 килобайт = 1024 байта"
     initial_state:
       length: 91
       offset: 180
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: speed / 1024
-  - offset: 295
-    length: 43
+  - offset: 286
+    length: 37
     placeholder_text: "...  # TODO перевести время в секунды"
     initial_state:
       length: 37
       offset: 286
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: time * 60
-  - offset: 424
-    length: 34
+  - offset: 390
+    length: 24
     placeholder_text: "...  # TODO размер файла"
     initial_state:
       length: 24
       offset: 390
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: "time_in_sec * speed_in_kb_in_sec  # размер файла"
-  - offset: 473
-    length: 56
+  - offset: 429
+    length: 27
     placeholder_text: "...  # TODO стоимость файла"
     initial_state:
       length: 27
       offset: 429
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: "(file_size - free_traffic) * cost  # стоимость фай\
       ла"
@@ -70,7 +70,4 @@ files:
     За трафик придется заплатить: 3537.5
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 12 Oct 2023 16:08:53 UTC"
 record: -1

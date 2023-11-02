@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 92
+  - offset: 57
     length: 69
     placeholder_text: '# TODO найдите и распечатайте количество уникальных символов
       в строке'
@@ -30,7 +30,4 @@ files:
     6
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 12 Oct 2023 17:06:21 UTC"
 record: -1

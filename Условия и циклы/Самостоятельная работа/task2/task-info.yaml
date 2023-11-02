@@ -12,7 +12,7 @@ files:
       offset: 36
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: a < 45 and b >= 45 and c >= 45
   - offset: 114
     length: 63
@@ -23,7 +23,7 @@ files:
       offset: 114
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: a >= 45 and b < 45 and c >= 45
   - offset: 192
     length: 63
@@ -34,7 +34,7 @@ files:
       offset: 192
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: a >= 45 and b >= 45 and c < 45
   - offset: 260
     length: 86
@@ -45,7 +45,7 @@ files:
       offset: 260
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: 'condition_1 or condition_2 or condition_3:'
   text: |
     a = 73
@@ -67,5 +67,5 @@ files:
   text: |
     Одно из чисел меньше 45
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

@@ -1,5 +1,5 @@
 def say_hello():  # Функция, которая печатает приветствие
-    print("Hello, World")  # TODO Поменяйте значение строки
+    print("Hello, World!")  # TODO Поменяйте значение строки
 
 
 say_hello()  # Вызов функции `say_hello`

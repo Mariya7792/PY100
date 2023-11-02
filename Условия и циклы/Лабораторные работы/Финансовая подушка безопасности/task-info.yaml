@@ -27,7 +27,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       money_capital = 20000  # Подушка безопасности
       salary = 5000  # Ежемесячная зарплата
@@ -56,6 +56,6 @@ files:
 
     print("Количество месяцев, которое можно протянуть без долгов:", ...)
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 solution_hidden: true

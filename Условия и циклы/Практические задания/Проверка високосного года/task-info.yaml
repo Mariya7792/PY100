@@ -3,14 +3,14 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 15
-    length: 105
+  - offset: 16
+    length: 55
     placeholder_text: "...:  # TODO Напишите условие проверки високосного года"
     initial_state:
       length: 55
       offset: 16
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: 'year % 4 == 0 and (year % 100 != 0 or year % 400 ==
       0):'
@@ -31,7 +31,4 @@ files:
     2012 является високосным годом.
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 19 Oct 2023 16:57:03 UTC"
 record: -1

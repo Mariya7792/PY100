@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: mul = 1
   - offset: 40
     length: 35
@@ -21,7 +21,7 @@ files:
       offset: 40
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       last_number = 10
 
@@ -41,5 +41,5 @@ files:
   text: |
     3628800
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

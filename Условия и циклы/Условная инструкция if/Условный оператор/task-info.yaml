@@ -4,13 +4,13 @@ files:
   visible: true
   placeholders:
   - offset: 12
-    length: 56
+    length: 55
     placeholder_text: "...  # TODO поочередно подставьте значения True и False"
     initial_state:
       length: 55
       offset: 12
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: "True"
   text: |

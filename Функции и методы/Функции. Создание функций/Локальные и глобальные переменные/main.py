@@ -17,3 +17,4 @@ radius = 5
 print(f"Длина окружности с радиусом {radius}: {calculate_circumference(radius):.4f}")
 print(f"Площадь круга с радиусом {radius}: {calculate_area(radius):.4f}")
 
+Glob = 5

@@ -3,31 +3,31 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 88
-    length: 0
+  - offset: 72
+    length: 41
     placeholder_text: "...  # TODO Получить последнего участника"
     initial_state:
       length: 41
       offset: 72
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: "list_players[-1]"
-  - offset: 98
-    length: 15
+  - offset: 123
+    length: 38
     placeholder_text: "...  # TODO Получить первого участника"
     initial_state:
       length: 38
       offset: 123
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       {
           "Первый участник": list_players[0]
       }
-  - offset: 115
-    length: 129
+  - offset: 163
+    length: 118
     placeholder_text: |-
       # TODO Распечатать имя последнего и первого участника
       print("Последний участник:", ...)
@@ -36,7 +36,7 @@ files:
       length: 118
       offset: 163
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       print("Последний участник:", last_player)
@@ -61,7 +61,4 @@ files:
     Первый участник: Маша
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 12 Oct 2023 16:26:26 UTC"
 record: -1

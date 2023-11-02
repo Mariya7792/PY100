@@ -17,3 +17,4 @@ print(fruits)  # ['apple', 'orange', 'banana']
 text = "hello, World"
 result = text.capitalize()
 print(result)  # Hello, world
+print(text)

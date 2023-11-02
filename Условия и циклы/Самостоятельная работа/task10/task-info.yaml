@@ -11,7 +11,7 @@ files:
       offset: 43
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       count_even = 0  # количество четных чисел
       count_odd = 0  # количество нечетных чисел
@@ -24,7 +24,7 @@ files:
       offset: 106
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       for value in list_:  # перебираем все числа
           if value % 2 == 0:
@@ -39,7 +39,7 @@ files:
       offset: 198
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       if count_even > count_odd:
           print('Четных чисел больше')
@@ -64,5 +64,5 @@ files:
   text: |
     Четных чисел больше
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

@@ -23,7 +23,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def count(list_, value):
           count_value = 0
@@ -42,5 +42,8 @@ files:
     print(count(list_items, 1) == list_items.count(1))  # True
     print(count(list_items, 3) == list_items.count(3))  # True
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 02 Nov 2023 16:53:51 UTC"
 record: -1

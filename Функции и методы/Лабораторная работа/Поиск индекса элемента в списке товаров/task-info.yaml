@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def find_item_index(items, item):
           for index, current_item in enumerate(items):
@@ -25,7 +25,7 @@ files:
       offset: 188
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: "find_item_index(items_list, find_item)"
   text: |
     # TODO Напишите функцию для поиска индекса товара
@@ -50,6 +50,6 @@ files:
     Первое вхождение товара 'груша' имеет индекс 3.
     Товар 'персик' не найден в списке.
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 solution_hidden: true

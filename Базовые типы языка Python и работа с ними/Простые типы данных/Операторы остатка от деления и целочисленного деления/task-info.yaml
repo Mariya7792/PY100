@@ -12,24 +12,24 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 127
-    length: 37
+  - offset: 99
+    length: 40
     placeholder_text: "...  # TODO найти полное количество дней"
     initial_state:
       length: 40
       offset: 99
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: total_hours // HOURS_IN_DAY
-  - offset: 200
-    length: 42
+  - offset: 148
+    length: 45
     placeholder_text: "...  # TODO найти оставшееся количество часов"
     initial_state:
       length: 45
       offset: 148
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: total_hours % HOURS_IN_DAY
   text: |
@@ -43,7 +43,4 @@ files:
     print("Оставшееся количество часов =", hours)
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 12 Oct 2023 15:42:55 UTC"
 record: -1

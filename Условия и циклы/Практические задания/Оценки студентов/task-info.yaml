@@ -3,15 +3,15 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 233
-    length: 57
+  - offset: 232
+    length: 120
     placeholder_text: '# TODO Распечатать имена студентов с оценками выше тройки'
     initial_state:
       length: 57
       offset: 233
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       # Печать имен студентов с оценкой выше тройки
       for student in students:
@@ -39,5 +39,5 @@ files:
     Саша. Оценка: 5
     Оля. Оценка: 4
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

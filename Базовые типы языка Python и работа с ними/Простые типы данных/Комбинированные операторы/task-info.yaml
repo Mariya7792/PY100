@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 38
+  - offset: 26
     length: 88
     placeholder_text: '# TODO сложить используя комбинированный оператор сложения
       с одновременным присваиванием'
@@ -31,7 +31,4 @@ files:
     Количество средств после выплаты равно = 15000
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 12 Oct 2023 15:37:09 UTC"
 record: -1

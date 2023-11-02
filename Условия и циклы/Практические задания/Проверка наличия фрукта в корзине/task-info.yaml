@@ -4,13 +4,13 @@ files:
   visible: true
   placeholders:
   - offset: 169
-    length: 21
+    length: 56
     placeholder_text: "...)  # TODO проверить наличие искомого фрукта в корзине"
     initial_state:
       length: 56
       offset: 169
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: search_fruit in cart)
   text: |
@@ -32,7 +32,4 @@ files:
     Персик есть в корзине с фруктами? False
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 19 Oct 2023 17:01:20 UTC"
 record: -1

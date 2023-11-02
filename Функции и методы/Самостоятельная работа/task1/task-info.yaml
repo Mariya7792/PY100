@@ -14,7 +14,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def remove_whitespace(str_):
           words_list = str_.split(" ")
@@ -44,5 +44,8 @@ files:
     123. test bks
     print test11
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 02 Nov 2023 17:22:29 UTC"
 record: -1

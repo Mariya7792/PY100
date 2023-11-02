@@ -12,14 +12,14 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def calculate_average_age(students):
           all_ages = students.values()
           average = sum(all_ages) / len(all_ages)
           return average
-  - offset: 194
-    length: 94
+  - offset: 86
+    length: 202
     placeholder_text: "print(f\"Средний возраст студентов: {...)} лет\")  # TODO Р\
       аспечатайте средний возраст студентов"
     initial_state:
@@ -27,7 +27,7 @@ files:
       offset: 194
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: "print(f\"Средний возраст студентов: {calculate_average_age(students_dict)}\"\
       )"
   text: "# TODO Напишите функцию calculate_average_age для расчета среднего возрас\
@@ -43,5 +43,5 @@ files:
   text: |
     Средний возраст студентов: 34.4
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

@@ -3,8 +3,8 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 10
-    length: 28
+  - offset: 9
+    length: 31
     placeholder_text: "...  # TODO Введите любое число"
     initial_state:
       length: 31
@@ -13,24 +13,24 @@ files:
     selected: false
     status: Solved
     encrypted_possible_answer: 25
-  - offset: 55
-    length: 59
+  - offset: 45
+    length: 53
     placeholder_text: "...:  # TODO проверьте, что число является счастливым"
     initial_state:
       length: 53
       offset: 45
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: "number in [7, 13, 21]:"
-  - offset: 155
-    length: 14
+  - offset: 135
+    length: 53
     placeholder_text: "...:  # TODO проверьте, что число попадает в диапазон"
     initial_state:
       length: 53
       offset: 135
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: '1 <= number <= 100:'
   text: |

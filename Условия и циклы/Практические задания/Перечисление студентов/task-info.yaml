@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 96
+  - offset: 59
     length: 38
     placeholder_text: '# TODO распечатать в столбик все имена'
     initial_state:
@@ -33,7 +33,4 @@ files:
     Оля
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 19 Oct 2023 17:09:43 UTC"
 record: -1

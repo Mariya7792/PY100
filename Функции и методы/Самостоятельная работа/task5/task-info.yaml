@@ -4,17 +4,17 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 60
+    length: 50
     placeholder_text: |-
       # TODO реализовать функцию
       def get_sentences_list():
           ...
     initial_state:
-      length: 60
+      length: 50
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def get_sentences_list(str_words):
           sentences_list = []
@@ -39,5 +39,8 @@ files:
   text: |
     ['Здесь много разных слов', 'Возможно и много повторений']
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 02 Nov 2023 18:12:23 UTC"
 record: -1

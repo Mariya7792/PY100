@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 174
+  - offset: 105
     length: 61
     placeholder_text: "# TODO записать условный оператор, который распечатает стро\
       ку"
@@ -36,7 +36,4 @@ files:
     Ещё один условный оператор
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 19 Oct 2023 16:03:03 UTC"
 record: -1

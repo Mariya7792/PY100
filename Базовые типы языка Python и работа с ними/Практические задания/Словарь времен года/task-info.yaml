@@ -3,14 +3,14 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 61
-    length: 0
+  - offset: 15
+    length: 40
     placeholder_text: "...  # TODO запишите словарь времен года"
     initial_state:
       length: 40
       offset: 15
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       {
@@ -33,7 +33,4 @@ files:
     {1: 'Зима', 2: 'Весна', 3: 'Лето', 4: 'Осень'}
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 12 Oct 2023 17:12:22 UTC"
 record: -1

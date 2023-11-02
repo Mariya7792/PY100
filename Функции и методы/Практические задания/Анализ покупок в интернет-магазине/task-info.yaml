@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def find_common_items(last_week_purchases, current_week_purchases):
           common_purchases = list(set(last_week_purchases).intersection(current_week_purchases))
@@ -26,7 +26,7 @@ files:
       offset: 168
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: "print(f\"Общие товары: {find_common_items(last_week_items,\
       \ current_week_items)}\")"
   text: |
@@ -46,5 +46,5 @@ files:
   text: |
     Общие товары: ['ноутбук', 'флешка']
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

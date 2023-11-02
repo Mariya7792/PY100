@@ -20,7 +20,7 @@ def contains_list_comprehension(code):
 class TestCase(unittest.TestCase):
     def test_contains_list_comprehension(self):
         filepath = "task.py"
-        with open(filepath) as f:
+        with open(filepath, encoding="utf-8") as f:
 
             assert contains_list_comprehension(f.read()) is True, (
                 'Проверьте, что в функции `generate_squares` используется list comprehension.'

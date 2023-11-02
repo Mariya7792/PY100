@@ -25,5 +25,6 @@ surname_list = [  # список фамилий Санкт-Петербурга
     "Никитин",
     "Соловьёв"
 ]
-
+for num, surname in enumerate(surname_list, start = 1):
+    print( f'{num:2} {surname}')
 # TODO распечатать фамилии и их номера

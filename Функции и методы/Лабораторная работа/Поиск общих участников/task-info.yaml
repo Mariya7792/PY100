@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def find_common_participants(participants1, participants2, separator=','):
           participants_list1 = participants1.split(separator)
@@ -29,7 +29,7 @@ files:
       offset: 156
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       participants = find_common_participants(participants_first_group, participants_second_group)
       print("Общие участники:", participants)
@@ -117,6 +117,6 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 solution_hidden: true

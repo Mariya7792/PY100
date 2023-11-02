@@ -22,7 +22,7 @@ files:
       offset: 14
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       if x > 0 and y > 0:  # x > 0, y > 0
           print("Первая четверть")
@@ -56,5 +56,5 @@ files:
   text: |
     Четвертая четверть
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

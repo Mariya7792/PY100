@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 73
+  - offset: 17
     length: 26
     placeholder_text: '# TODO распечатать лесенку'
     initial_state:
@@ -31,7 +31,4 @@ files:
     *
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 19 Oct 2023 17:07:11 UTC"
 record: -1

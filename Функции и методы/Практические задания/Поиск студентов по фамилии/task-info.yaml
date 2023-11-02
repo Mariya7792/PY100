@@ -4,14 +4,14 @@ files:
   visible: true
   placeholders:
   - offset: 56
-    length: 58
+    length: 125
     placeholder_text: "...  # TODO Напишите проверку студента с заданной фамилией"
     initial_state:
       length: 58
       offset: 56
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       for student in students:
               if student['фамилия'] == lastname:
@@ -42,5 +42,5 @@ files:
     Есть ли в базе студент с фамилией Иванов? True
     Есть ли в базе студент с фамилией Пупкин? False
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

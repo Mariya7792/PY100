@@ -32,7 +32,4 @@ files:
     ['яблоко', 'банан', 'апельсин', 'виноград']
   learner_created: false
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Thu, 12 Oct 2023 16:40:06 UTC"
 record: -1

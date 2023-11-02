@@ -19,7 +19,7 @@ files:
       offset: 105
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       max_index = 0
       max_value = list_numbers[max_index]
@@ -39,5 +39,5 @@ files:
 
     print(list_numbers)  # Ответ [2, 90, -2, 8, -36, -44, -1, -85, -14, 25, -22, -90, -100, -8, 38, -92, -45, 67, 53, 90]
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
