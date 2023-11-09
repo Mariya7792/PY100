@@ -11,29 +11,29 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def calculate_average_age(students: list[dict]) -> float:
           """Функция для вычисления среднего возраста учеников."""
           total_age = sum([student['age'] for student in students])
           avg_age = total_age / len(students)
           return avg_age
-  - offset: 48
+  - offset: 366
     length: 46
     placeholder_text: '# TODO Напишите функцию filter_students_by_age'
     initial_state:
       length: 46
       offset: 48
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       def filter_students_by_age(students: list[dict], filter_age: float) -> list[dict]:
           """Функция для фильтрации списка учеников по возрасту."""
           filtered = [student for student in students if student['age'] < filter_age]
           return filtered
-  - offset: 582
-    length: 85
+  - offset: 859
+    length: 164
     placeholder_text: |-
       # TODO Вычислите средний возраст учеников
           print("Средний возраст учеников:", ...)
@@ -41,13 +41,13 @@ files:
       length: 85
       offset: 582
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       average_age = calculate_average_age(students_list)
           print("Средний возраст учеников:", average_age)
-  - offset: 711
-    length: 156
+  - offset: 1067
+    length: 162
     placeholder_text: |-
       # TODO Офильтруйте учеников
           print("Список учеников с возрастом меньше среднего:")
@@ -58,7 +58,7 @@ files:
       offset: 711
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       filtered_students = filter_students_by_age(students_list, average_age)
           print("Список учеников с возрастом меньше среднего:")
@@ -212,5 +212,8 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 09 Nov 2023 15:54:33 UTC"
 record: -1

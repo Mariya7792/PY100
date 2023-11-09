@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Solved
+    status: Unchecked
     encrypted_possible_answer: |-
       def calculate_parking_load(total_parking_spaces, occupied_parking_spaces):
           parking_load = (occupied_parking_spaces / total_parking_spaces) * 100

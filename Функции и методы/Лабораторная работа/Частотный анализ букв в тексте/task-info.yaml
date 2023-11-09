@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def count_letters(text):
           lower_text = text.lower()
@@ -32,7 +32,7 @@ files:
       offset: 41
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: "def calculate_frequency(letter_count):\n    total_letters\
       \ = sum(letter_count.values())\n    \n    letter_frequency = {}\n    for current_letter,\
       \ count in letter_count.items():\n        letter_frequency[current_letter] =\
@@ -45,7 +45,7 @@ files:
       offset: 999
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       count_dict = count_letters(main_str)
       frequency_dict = calculate_frequency(count_dict)
@@ -134,6 +134,6 @@ files:
     ж: 0.01
     щ: 0.00
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 solution_hidden: true

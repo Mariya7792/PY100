@@ -11,7 +11,7 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def decimal_to_hex() -> dict[int, str]:
           """
@@ -21,16 +21,16 @@ files:
           dict: Словарь с преобразованными значениями.
           """
           return {decimal: hex(decimal) for decimal in range(16)}
-  - offset: 72
-    length: 75
+  - offset: 207
+    length: 25
     placeholder_text: "...  # TODO Распечатайте словарь с десятичными и шестнадцат\
       еричными числами"
     initial_state:
       length: 75
       offset: 72
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       converted_dict = decimal_to_hex()
           print(converted_dict)
@@ -49,5 +49,8 @@ files:
   text: |
     {0: '0x0', 1: '0x1', 2: '0x2', 3: '0x3', 4: '0x4', 5: '0x5', 6: '0x6', 7: '0x7', 8: '0x8', 9: '0x9', 10: '0xa', 11: '0xb', 12: '0xc', 13: '0xd', 14: '0xe', 15: '0xf'}
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 09 Nov 2023 16:19:38 UTC"
 record: -1

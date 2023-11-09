@@ -3,15 +3,15 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 139
-    length: 49
+  - offset: 197
+    length: 15
     placeholder_text: "...  # TODO Преобразовать цвета в верхний регистр"
     initial_state:
       length: 49
       offset: 139
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: "[color.upper() for color in colors]"
   text: |
     def convert_to_uppercase(colors: list[str]) -> list[str]:
@@ -32,5 +32,8 @@ files:
   text: |
     ['#FF0000', '#00FF00', '#0000FF']
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 09 Nov 2023 16:23:47 UTC"
 record: -1

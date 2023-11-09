@@ -10,7 +10,7 @@ files:
       length: 57
       offset: 233
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Solved
     encrypted_possible_answer: |-
       # Печать имен студентов с оценкой выше тройки

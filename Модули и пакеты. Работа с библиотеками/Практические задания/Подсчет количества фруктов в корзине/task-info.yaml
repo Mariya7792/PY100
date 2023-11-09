@@ -11,9 +11,9 @@ files:
       offset: 0
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: from collections import Counter
-  - offset: 662
+  - offset: 759
     length: 43
     placeholder_text: '# TODO Подсчитайте фрукты с помощью Counter'
     initial_state:
@@ -21,7 +21,7 @@ files:
       offset: 662
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       fruit_counter = Counter(cart_fruits)
           print(fruit_counter)
@@ -48,5 +48,8 @@ files:
   text: |
     Counter({'Банан': 19, 'Апельсин': 16, 'Яблоко': 15})
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 09 Nov 2023 14:57:49 UTC"
 record: -1

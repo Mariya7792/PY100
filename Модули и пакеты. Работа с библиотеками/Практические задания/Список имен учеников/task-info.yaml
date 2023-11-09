@@ -16,8 +16,8 @@ files:
       def get_student_names(students: list[dict]) -> list[str]:
           """Функция для извлечения списка имен учеников из списка словарей с информацией о них."""
           return [student["name"] for student in students]
-  - offset: 493
-    length: 41
+  - offset: 592
+    length: 40
     placeholder_text: '# TODO Вызовите функцию get_student_names'
     initial_state:
       length: 41

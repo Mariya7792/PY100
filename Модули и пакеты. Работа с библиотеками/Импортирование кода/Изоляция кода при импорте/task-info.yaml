@@ -35,7 +35,7 @@ files:
       offset: 70
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       if __name__ == '__main__':
           print(f"Функция `calculate_square_area` вызвана в модуле {__name__}")  # Печать переменной с названием модуля
@@ -49,5 +49,5 @@ files:
     print(f"Функция `calculate_square_area` вызвана в модуле {__name__}")  # Печать переменной с названием модуля
     print(calculate_square_area(2))  # код оставшийся от проверки функции
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

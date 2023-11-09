@@ -1,4 +1,7 @@
 # TODO Напишите функцию get_student_names
+def get_students_names(list_):
+    list2 = [diction['name'] for diction in list_]
+    return list2
 
 
 if __name__ == '__main__':
@@ -25,4 +28,4 @@ if __name__ == '__main__':
             "age": 43,
         },
     ]
-    # TODO Вызовите функцию get_student_names
+    print(get_students_names(students_list))

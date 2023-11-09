@@ -24,6 +24,6 @@ files:
     CONST_VALUE_1 = "Константное значение 1"
     CONST_VALUE_2 = "Константное значение 2"
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 post_submission_on_open: true

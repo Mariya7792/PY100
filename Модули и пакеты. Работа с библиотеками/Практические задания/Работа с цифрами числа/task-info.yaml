@@ -3,67 +3,67 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 38
-    length: 67
+  - offset: 37
+    length: 35
     placeholder_text: "...  # TODO c помощью list comprehension получить список ци\
       фр числа"
     initial_state:
       length: 67
       offset: 38
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: "[int(digit) for digit in str(number)]"
-  - offset: 113
-    length: 35
+  - offset: 80
+    length: 17
     placeholder_text: "...)  # TODO найти сумму цифр числа"
     initial_state:
       length: 35
       offset: 113
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: sum(list_digits))
-  - offset: 155
-    length: 42
+  - offset: 104
+    length: 49
     placeholder_text: "...)  # TODO найти сумму всех четных чисел"
     initial_state:
       length: 42
       offset: 155
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: "sum([even_digit for even_digit in list_digits if even_digit\
       \ % 2 == 0]))"
-  - offset: 204
-    length: 34
+  - offset: 160
+    length: 17
     placeholder_text: "...)  # TODO найти количество цифр"
     initial_state:
       length: 34
       offset: 204
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: len(list_digits))
-  - offset: 245
-    length: 36
+  - offset: 184
+    length: 49
     placeholder_text: "...)  # TODO найти минимальную цифру"
     initial_state:
       length: 36
       offset: 245
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: min(list_digits))
-  - offset: 288
-    length: 59
+  - offset: 240
+    length: 88
     placeholder_text: "...)  # TODO найти разность между первой и последней цифрой"
     initial_state:
       length: 59
       offset: 288
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: "list_digits[0] - list_digits[-1])"
   text: |
     number = 2342354235235
@@ -88,5 +88,8 @@ files:
     2
     -3
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 09 Nov 2023 16:33:20 UTC"
 record: -1
