@@ -11,6 +11,7 @@ def get_int_val(border: list(int, int) = None) -> int:
 
         if number not in range(border[0], border[-1] + 1):
             continue
+            
         return number
 
 
@@ -22,9 +23,8 @@ def get_char_val(text: str, req_list: list) -> str:
     :param req_list: Знак, который можно ввести
     :return: Знак, выбранный пользователем
     """
-    req_list = ['0', 'X']
+    # req_list = ['0', 'X']
     while True:
-        # text = input(f'Пожалуйста, введите знак из списка {req_list}:')
         symbol = input(text)
         if symbol not in req_list:
             print(f'Пожалуйста, введите только знак из списка {req_list}!')
@@ -193,8 +193,22 @@ def game(player: str, size: int) -> Optional[str]:
         если выберет с компьютером, то напишите, что пока это в разработке.
     """
     print('Добро пожаловать в игру крестики-нолики!')
+    game_partner_choice = input('С кем вы хотели бы играть? С другим человеком(1) или компьютером(2)?')
+    if game_partner_choice = '1':
+        print('Игра запускается')
+    else:
+        print('Игра с компьютером пока в разработке')
     border_number = get_int_val([3,6]) 
-    field = draw_field(size)
+    
+    req_list = ['0', 'X']
+    
+    text_for_player = f'Выберите, каким символом будете играть из значений {req_list}:'))
+    player1 = get_char_value(text_for_player, req_list)
+    if player1 == 'X':
+        player2 == 'O':
+    else:
+        player2 == 'X'
+    print(f'Первый игрок выбрал {player1}, второй игрок будет ходить {player2}')
     game()
     # TODO Написать реализацию
 
