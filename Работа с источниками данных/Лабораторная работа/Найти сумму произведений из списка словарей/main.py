@@ -1,11 +1,11 @@
 
-def draw_field(field):
-    size = int(input("Пожалуйста, введите размер поля:" ))
+def draw_field(size):
+    # size = int(input("Пожалуйста, введите размер поля:" ))
     field = init_field(size)
     return field
 
-def get_int_val(text: str, border: list(int, int) = None) -> int:
-    # text = f'Пожалуйста, введите число в диапазоне от {border[0]} до {border[-1]}:'
+def get_int_val(border: list(int, int) = None) -> int:
+    text = f'Пожалуйста, введите число в диапазоне от {border[0]} до {border[-1]}:'
     while True:
         number = int(input(text))
 
@@ -87,12 +87,42 @@ def is_win(field):
     :param field:
     :return:
     """
-    set_player_in_field()
-    if
+    border = get_int_val()
+    # Проверка по горизонтали
     for lists in field:
-        if (set(lists)) == {'X'} or (set(lists)) == {'0'}:
+            if (set(lists)) == {'X'} or (set(lists)) == {'0'}:
+                return True
+            else:
+                return False
+                
+    # Проверка по вертикали
+    list_vertical = []
+    for index in range(len(field)):
+        for indexes in range(len(field)):
+            list_vertical.append(field[index][indexes])
+    for i in range(len(list_vertical)):
+        if len(list_vertical[i::border]) == border and set(list_vertical[i::border]) == {'X'} or set(list_vertical[i::border]) == {'0'}:
             return True
-        elif
+        else:
+            return False   
+    
+    # Проверка по диагонали
+    list_diagonal_left = []
+    list_diagonal_right = []
+    index_left = 0
+    index_right =-1
+    for index in range(len(list_)):
+        list_diagonal_left.append(list_[index][index_left])
+        list_diagonal_right.append(list_[index][index_right])
+        index_left += 1
+        index_right -= 1
+    if set(list_diagonal_left) or set(list_diagonal_right) == {'X'}:
+        return True
+    elif set(list_diagonal_left) or set(list_diagonal_right) == {'0'}:
+        return True
+    else:
+        return False
+        
 
 def change_player(current_player: str) -> str:
     """
@@ -135,12 +165,61 @@ def game(player: str, size: int) -> Optional[str]:
     Если шаги закончились, а никто не выиграл, значит у нас ничья!
     """
 
-    field_beginning = init_field(get_int_val())
+    field_beginning = init_field(border_number)
     field_for_game = draw_field(field_beginning)
-    max_attempts = int(input("Введи максимальное число попыток: "))
+    
+    max_attempts = int(input("Введите максимальное число попыток: "))
     attempts = 0
     while attempts < max_attempts:
         current_player = set_player_in_field(field_for_game)
+
+        if is_win == True:
+            
+    if attempts == max_attempts:
+        return 'Ничья!'
+
+    def app():
+    """
+    Запуск приложения игры крестики-нолики
+    :return:
+    """
+
+    """
+    В работе использовать функции написанные выше
+    
+    Здесь можете спросить у пользователя на каком полу он хочет играть
+    Кто будет ходить первым, может это будет X, а может 0
+    С кем будет играть пользователь, с другим человеком или с компьютером. Если с человеком, то запустите ему игру,
+        если выберет с компьютером, то напишите, что пока это в разработке.
+    """
+    print('Добро пожаловать в игру крестики-нолики!')
+    border_number = get_int_val([3,6]) 
+    field = draw_field(size)
+    game()
+    # TODO Написать реализацию
+
+
+if __name__ == "__main__":
+    app()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 """
@@ -322,7 +401,8 @@ def app():
     С кем будет играть пользователь, с другим человеком или с компьютером. Если с человеком, то запустите ему игру,
         если выберет с компьютером, то напишите, что пока это в разработке.
     """
-
+     border_number = get_int_val([3,6]) 
+    
     # TODO Написать реализацию
 
 
