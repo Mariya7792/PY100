@@ -110,7 +110,7 @@ def is_win(field):
     list_diagonal_left = []
     list_diagonal_right = []
     index_left = 0
-    index_right =-1
+    index_right = -1
     for index in range(len(list_)):
         list_diagonal_left.append(list_[index][index_left])
         list_diagonal_right.append(list_[index][index_right])
@@ -172,9 +172,12 @@ def game(player: str, size: int) -> Optional[str]:
     attempts = 0
     while attempts < max_attempts:
         current_player = set_player_in_field(field_for_game)
+        
 
         if is_win == True:
             
+        else:
+            change_player()
     if attempts == max_attempts:
         return 'Ничья!'
 
@@ -210,7 +213,6 @@ def game(player: str, size: int) -> Optional[str]:
         player2 == 'X'
     print(f'Первый игрок выбрал {player1}, второй игрок будет ходить {player2}')
     game()
-    # TODO Написать реализацию
 
 
 if __name__ == "__main__":
