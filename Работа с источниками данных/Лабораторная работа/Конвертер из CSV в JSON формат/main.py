@@ -20,7 +20,7 @@ def get_int_val(text: str, border: tuple[int, int] = None) -> int:
     while True:
         try:
             number = int(input(text))
-        except:
+        except ValueError:
             print('Пожалуйста, вводите только число')
             continue
 
