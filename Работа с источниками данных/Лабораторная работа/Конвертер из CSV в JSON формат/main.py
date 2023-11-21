@@ -11,17 +11,16 @@ def init_field(size:int, empty_cell: str = EMPTY_CELL) -> list:
 
 
 def draw_field(size):
-    # size = int(input("Пожалуйста, введите размер поля:" ))
     field = init_field(size)
     return field
 
 
-def get_int_val(text:str, border: tuple[int, int] = None) -> int:
-    # text = f'Пожалуйста, введите число в диапазоне от {border[0]} до {border[-1]}:'
+def get_int_val(text: str, border: tuple[int, int] = None) -> int:
     while True:
         number = int(input(text))
 
         if number not in range(border[0], border[-1] + 1):
+            print(f'Пожалуйста, введите число только в диапазоне от {border[0]} до {border[-1]}:')
             continue
 
         return number
@@ -38,10 +37,11 @@ def get_char_val(text: str, req_list: list) -> str:
     while True:
         symbol = input(text)
         if symbol not in req_list:
-            print(f'Пожалуйста, введите только знак из списка {req_list}!')
+            print(f'Пожалуйста, введите знак из списка {req_list}!')
             continue
 
         return symbol
+
 
 def get_index_from_table(field, size: int):
     """
@@ -50,25 +50,23 @@ def get_index_from_table(field, size: int):
     :param size:
     :return: Возвращаем индекс, куда можно поставить
     """
-    place_line = int(input("Укажите, в какую строку хотите поставить символ:")) - 1
-    place_column = int(input("Укажите, в какой столбец хотите поставить символ:")) - 1
-    index = [place_line, place_column]
     while True:
+        place_line = int(input("Укажите, в какую строку хотите поставить символ:")) - 1
+        place_column = int(input("Укажите, в какой столбец хотите поставить символ:")) - 1
+        index = [place_line, place_column]
         if field[place_line][place_column] == EMPTY_CELL:
             return index
         elif place_line > size or place_column > size:
             print("Вы вышли за пределы поля!")
             continue
+        elif place_line == -1 or place_column == -1:
+            print('Пожалуйста, введите символ!')
+            continue
         else:
             print("Здесь уже есть символ. Пожалуйста, выберите другое место!")
             continue
-
-    # while True:
-    # if field[place_line][place_column] == EMPTY_CELL:
-    #     field[place_line][place_column] = symbol
-    #
-    #     return field
-
+            
+            
 def set_player_in_field(field,
                         current_player: str,
                         index_step):
@@ -97,9 +95,6 @@ def is_win(field):
     for lists in field:
         if (set(lists)) == {'X'} or (set(lists)) == {'0'}:
             return True
-        else:
-            return False
-
     # Проверка по вертикали
     list_vertical = []
     for index in range(len(field)):
@@ -110,10 +105,8 @@ def is_win(field):
         if len(list_vertical[i::border]) == border and set(list_vertical[i::border]) == {'X'} or set(
                 list_vertical[i::border]) == {'0'}:
             return True
-        else:
-            return False
 
-            # Проверка по диагонали
+    # Проверка по диагонали
     list_diagonal_left = []
     list_diagonal_right = []
     index_left = 0
@@ -123,9 +116,9 @@ def is_win(field):
         list_diagonal_right.append(field[index][index_right])
         index_left += 1
         index_right -= 1
-    if set(list_diagonal_left) or set(list_diagonal_right) == {'X'}:
+    if set(list_diagonal_left) == {'X'} or set(list_diagonal_right) == {'X'}:
         return True
-    elif set(list_diagonal_left) or set(list_diagonal_right) == {'0'}:
+    elif set(list_diagonal_left) == {'0'} or set(list_diagonal_right) == {'0'}:
         return True
     else:
         return False
@@ -139,9 +132,12 @@ def change_player(current_player: str) -> str:
     :return:
     """
     if current_player == 'X':
-        return 'Ходит игрок, выбравший "0":'
+        next_player = '0'
     if current_player == '0':
-        return 'Ходит игрок, выбравший "X":'
+        next_player = 'X'
+
+    return next_player
+
 
 def game(player: str, size: int) -> Optional[str]:
     """
@@ -151,20 +147,6 @@ def game(player: str, size: int) -> Optional[str]:
     :param size: размер поля
     :return: возвращаем None если ничья или возвращаем игрока кто победил
     """
-    """
-    Инициализируем поле для игры с заданным размером
-    Отрисовываем текущее поле
-    Инициализируем счетчик ходов
-    Запускаем цикл while с условием пока счетчик меньше числа возможных ходов
-        Получаем индексы куда поставил игрок (с проверками)
-        Обновляем поле по тем индексам
-        Отрисовываем поле
-        Увеличиваем счётчик ходов
-        Проводим проверку кто выиграл, если кто-то выиграл то возвращаем кто выиграл
-        Меняем игрока на следующего
-    Если шаги закончились, а никто не выиграл, значит у нас ничья!
-    """
-
     field_beginning = init_field(size)
     field_for_game = draw_field(size)
 
@@ -179,17 +161,18 @@ def game(player: str, size: int) -> Optional[str]:
         player_chosen_index = get_index_from_table(field_for_game, size)
         current_field = set_player_in_field(field_for_game, player, player_chosen_index)
         if is_win(current_field) == True:
-            return f'Вы выиграли!'
+            print(f'Поздравляем! Игрок, выбравший {player}, выиграл!')
+            break
         else:
             attempts += 1
-            change_player(player)
+            print('Смена игрока')
             print('Ваше поле после хода последнего игрока:')
+            player = change_player(player)
             for field in current_field:
                 print(field)
-
-
+            continue
     if attempts == max_attempts:
-        return 'Ничья!'
+        print('Ничья!')
 
 
 def app():
@@ -225,4 +208,3 @@ def app():
 
 if __name__ == "__main__":
     app()
-
