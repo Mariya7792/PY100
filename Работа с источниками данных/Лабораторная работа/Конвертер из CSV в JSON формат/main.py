@@ -206,7 +206,7 @@ def app():
     else:
         print('Игра с компьютером пока в разработке. Запускаем игру с другим человеком')
     border = [3, 6]
-    text_for_border = f'Выберете размер поля. Пожалуйста, введите число в диапазоне от {border[0]} до {border[-1]}:'
+    text_for_border = f'Выберите размер поля. Пожалуйста, введите число в диапазоне от {border[0]} до {border[-1]}:'
     border_number = get_int_val(text_for_border, border)
 
     req_list = ['0', 'X']
