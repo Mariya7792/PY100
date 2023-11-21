@@ -50,18 +50,13 @@ def get_index_from_table(field, size: int):
     :param size:
     :return: Возвращаем индекс, куда можно поставить
     """
-    # field = init_field()
-    # symbol = get_char_val()
     place_line = int(input("Укажите, в какую строку хотите поставить символ:")) - 1
     place_column = int(input("Укажите, в какой столбец хотите поставить символ:")) - 1
-
-    place_in_field = field[place_line][place_column]
-    for i in
-
+    index = [place_line, place_column]
     while True:
-        if place_in_field == EMPTY_CELL:
+        if field[place_line][place_column] == EMPTY_CELL:
             return index
-        elif index > size:
+        elif place_line > size or place_column > size:
             print("Вы вышли за пределы поля!")
             continue
         else:
@@ -84,8 +79,10 @@ def set_player_in_field(field,
 
     :return: Возвращаем поле с текущим ходом игрока
     """
-    if field[index_step] == EMPTY_CELL:
-        field[index_step] = current_player
+    index_lists = index_step[0]
+    index_field = index_step[1]
+    if field[index_lists][index_field] == EMPTY_CELL:
+        field[index_lists][index_field] = current_player
 
     return field
 
