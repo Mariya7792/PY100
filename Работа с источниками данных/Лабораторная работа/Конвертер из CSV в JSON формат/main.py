@@ -16,8 +16,8 @@ def draw_field(size):
     return field
 
 
-def get_int_val(border: list = None) -> int:
-    text = f'Пожалуйста, введите число в диапазоне от {border[0]} до {border[-1]}:'
+def get_int_val(text:str, border: tuple[int, int] = None) -> int:
+    # text = f'Пожалуйста, введите число в диапазоне от {border[0]} до {border[-1]}:'
     while True:
         number = int(input(text))
 
@@ -93,7 +93,6 @@ def is_win(field):
     :param field:
     :return:
     """
-    border = get_int_val()
     # Проверка по горизонтали
     for lists in field:
         if (set(lists)) == {'X'} or (set(lists)) == {'0'}:
@@ -106,6 +105,7 @@ def is_win(field):
     for index in range(len(field)):
         for indexes in range(len(field)):
             list_vertical.append(field[index][indexes])
+    border = len(field)
     for i in range(len(list_vertical)):
         if len(list_vertical[i::border]) == border and set(list_vertical[i::border]) == {'X'} or set(
                 list_vertical[i::border]) == {'0'}:
@@ -205,8 +205,9 @@ def app():
         print('Игра запускается')
     else:
         print('Игра с компьютером пока в разработке. Запускаем игру с другим человеком')
-
-    border_number = get_int_val([3, 6])
+    border = [3, 6]
+    text_for_border = f'Выберете размер поля. Пожалуйста, введите число в диапазоне от {border[0]} до {border[-1]}:'
+    border_number = get_int_val(text_for_border, border)
 
     req_list = ['0', 'X']
 
