@@ -2,7 +2,8 @@ from typing import Union, Optional
 
 EMPTY_CELL = "_"
 
-def init_field(size:int, empty_cell: str = EMPTY_CELL) -> list:
+
+def init_field(size: int, empty_cell: str = EMPTY_CELL) -> list:
     """
     Создает пустое поле для начала игры
     :return: возвращает словарь
@@ -10,17 +11,21 @@ def init_field(size:int, empty_cell: str = EMPTY_CELL) -> list:
     return [[empty_cell] * size for _ in range(size)]
 
 
-def draw_field(size):
-    field = init_field(size)
-    return field
+def draw_field(field):
+    for line in field:
+        print(line)
 
 
 def get_int_val(text: str, border: tuple[int, int] = None) -> int:
     while True:
-        number = int(input(text))
+        try:
+            number = int(input(text))
+        except:
+            print('Пожалуйста, вводите только число')
+            continue
 
         if number not in range(border[0], border[-1] + 1):
-            print(f'Пожалуйста, введите число только в диапазоне от {border[0]} до {border[-1]}:')
+            print(f'Пожалуйста, введите число только в диапазоне от {border[0]} до {border[-1]}')
             continue
 
         return number
@@ -51,8 +56,9 @@ def get_index_from_table(field, size: int):
     :return: Возвращаем индекс, куда можно поставить
     """
     while True:
-        place_line = int(input("Укажите, в какую строку хотите поставить символ:")) - 1
+        place_line = get_int_val("Укажите, в какую строку хотите поставить символ: ", (1, size)) - 1
         place_column = int(input("Укажите, в какой столбец хотите поставить символ:")) - 1
+
         index = [place_line, place_column]
         if field[place_line][place_column] == EMPTY_CELL:
             return index
@@ -65,8 +71,8 @@ def get_index_from_table(field, size: int):
         else:
             print("Здесь уже есть символ. Пожалуйста, выберите другое место!")
             continue
-            
-            
+
+
 def set_player_in_field(field,
                         current_player: str,
                         index_step):
@@ -74,7 +80,7 @@ def set_player_in_field(field,
     Ставим игрока на поле. По переданным координатам index_step ставим игрока current_player на поле field
     :param field:
     :param current_player:
-
+    :param index_step:
     :return: Возвращаем поле с текущим ходом игрока
     """
     index_lists = index_step[0]
@@ -101,9 +107,8 @@ def is_win(field):
         for indexes in range(len(field)):
             list_vertical.append(field[index][indexes])
     border = len(field)
-    for i in range(len(list_vertical)):
-        if len(list_vertical[i::border]) == border and set(list_vertical[i::border]) == {'X'} or set(
-                list_vertical[i::border]) == {'0'}:
+    for i in range(len(list_vertical[::3])):
+        if set(list_vertical[i::border]) == {'X'} or set(list_vertical[i::border]) == {'0'}:
             return True
 
     # Проверка по диагонали
@@ -129,7 +134,7 @@ def change_player(current_player: str) -> str:
     Определяет кто ходит следующий
 
     :param current_player: Текущий игрок
-    :return:
+    :return: Возвращает следующего игрока
     """
     if current_player == 'X':
         next_player = '0'
@@ -139,7 +144,7 @@ def change_player(current_player: str) -> str:
     return next_player
 
 
-def game(player: str, size: int) -> Optional[str]:
+def game(player: str, size: int):
     """
     Запускает игру
 
@@ -147,31 +152,27 @@ def game(player: str, size: int) -> Optional[str]:
     :param size: размер поля
     :return: возвращаем None если ничья или возвращаем игрока кто победил
     """
-    field_beginning = init_field(size)
-    field_for_game = draw_field(size)
+    field_for_game = init_field(size)
 
     print('Ваше поле для игры:')
-    for field in field_for_game:
-        print(field)
+    draw_field(field_for_game)
 
-    max_attempts = int(input("Введите максимальное число попыток: "))
+    # max_attempts = int(input("Введите максимальное число попыток: "))
     attempts = 0
 
-    while attempts < max_attempts:
+    while attempts < size*size:
         player_chosen_index = get_index_from_table(field_for_game, size)
         current_field = set_player_in_field(field_for_game, player, player_chosen_index)
-        if is_win(current_field) == True:
+        if is_win(current_field) is True:
             print(f'Поздравляем! Игрок, выбравший {player}, выиграл!')
             break
-        else:
-            attempts += 1
-            print('Смена игрока')
-            print('Ваше поле после хода последнего игрока:')
-            player = change_player(player)
-            for field in current_field:
-                print(field)
-            continue
-    if attempts == max_attempts:
+        attempts += 1
+        print('Смена игрока')
+        print('Ваше поле после хода последнего игрока:')
+        player = change_player(player)
+        draw_field(current_field)
+
+    if attempts == size*size:
         print('Ничья!')
 
 
@@ -205,6 +206,7 @@ def app():
     print(f'Первый игрок выбрал {player_1}, второй игрок: {player_2}')
     print('Начнем игру!')
     game(player_1, border_number)
+
 
 if __name__ == "__main__":
     app()
