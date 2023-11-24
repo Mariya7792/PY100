@@ -6,17 +6,30 @@ EMPTY_CELL = "_"
 def init_field(size: int, empty_cell: str = EMPTY_CELL) -> list:
     """
     Создает пустое поле для начала игры
-    :return: возвращает словарь
+    :param size: размер поля
+    :param empty_cell: чем заполняется пустая ячейка
+    :return: отображение пустого поля в виде списка списков
+    
     """
     return [[empty_cell] * size for _ in range(size)]
 
 
 def draw_field(field):
+    """
+    Функция рисует поле
+    :param field: само поле
+    
+    """
     for line in field:
         print(line)
 
 
 def get_int_val(text: str, border: tuple[int, int] = None) -> int:
+     """
+    Спрашиваем у пользователя размеры поля и проверяем, ввел ли игрок правильное значение
+    :param text: текст, который запрашивает данные 
+    :param border: границы размера поля
+    """
     while True:
         try:
             number = int(input(text))
@@ -33,11 +46,11 @@ def get_int_val(text: str, border: tuple[int, int] = None) -> int:
 
 def get_char_val(text: str, req_list: list) -> str:
     """
-    Пользователь вводит символ. Проверяем, сответствует ли элемент, введенный пользователем, условиям задачи.
+    Пользователь вводит символ (0 или X). Проверяем, сответствует ли элемент, введенный пользователем, условиям задачи.
     Если нет, то просим заново ввести.
-    :param text: Символ игрока
-    :param req_list: Знак, который можно ввести
-    :return: Знак, выбранный пользователем
+    :param text: текст, который запрашивает данные
+    :param req_list: знак, который можно ввести
+    :return: знак, выбранный пользователем
     """
     while True:
         symbol = input(text)
@@ -51,9 +64,9 @@ def get_char_val(text: str, req_list: list) -> str:
 def get_index_from_table(field, size: int):
     """
     Спрашиваем у игрока, куда он хочет поставить символ. Получив ответ, проверяем, можно ли туда поставить
-    :param field:
-    :param size:
-    :return: Возвращаем индекс, куда можно поставить
+    :param field: поле игры
+    :param size: размер поля
+    :return: возвращаем индекс, куда можно поставить
     """
     while True:
         place_line = get_int_val("Укажите, в какую строку хотите поставить символ: ", (1, size)) - 1
@@ -78,10 +91,10 @@ def set_player_in_field(field,
                         index_step):
     """
     Ставим игрока на поле. По переданным координатам index_step ставим игрока current_player на поле field
-    :param field:
-    :param current_player:
-    :param index_step:
-    :return: Возвращаем поле с текущим ходом игрока
+    :param field: поле игры
+    :param current_player: текущий игрок
+    :param index_step: куда ставим игрока
+    :return: возвращаем поле с текущим ходом игрока
     """
     index_lists = index_step[0]
     index_field = index_step[1]
@@ -94,8 +107,8 @@ def set_player_in_field(field,
 def is_win(field):
     """
     Проверка, выигрышная ли компинация
-    :param field:
-    :return:
+    :param field: поле для игры
+    :return: возвращаем поле после проверки
     """
     # Проверка по горизонтали
     for lists in field:
@@ -131,10 +144,10 @@ def is_win(field):
 
 def change_player(current_player: str) -> str:
     """
-    Определяет кто ходит следующий
+    Определяет, кто ходит следующий
 
-    :param current_player: Текущий игрок
-    :return: Возвращает следующего игрока
+    :param current_player: текущий игрок
+    :return: возвращает следующего игрока
     """
     if current_player == 'X':
         next_player = '0'
@@ -148,9 +161,9 @@ def game(player: str, size: int):
     """
     Запускает игру
 
-    :param player: игрок которых ходит первым
+    :param player: игрок, который ходит первым
     :param size: размер поля
-    :return: возвращаем None если ничья или возвращаем игрока кто победил
+    :return: выводим 'ничья' или возвращаем победителя
     """
     field_for_game = init_field(size)
 
@@ -179,7 +192,6 @@ def game(player: str, size: int):
 def app():
     """
     Запуск приложения игры крестики-нолики
-    :return:
     """
     print('Добро пожаловать в игру крестики-нолики!')
 
